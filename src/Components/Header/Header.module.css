@@ -1,0 +1,19 @@
+.container__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #07a0c3;
+  height: 5rem;
+}
+.container__logo {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+.logo {
+  width: 50px;
+  margin-left: 1rem;
+}
+.cabecalho__titulo {
+  display: none;
+}
