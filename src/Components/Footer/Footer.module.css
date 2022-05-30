@@ -1,10 +1,13 @@
 .container{
     background-color:#07a0c3;
-    height:400px;
+    height:700px;
     width: 100%;
+    position: relative;
+    bottom:0;
     margin-top:50px;
     color:#ffffff;
     padding: 15px;
+    box-sizing: border-box;
 
 }
 
@@ -12,11 +15,29 @@
     display: flex;
     flex-direction:column;
     justify-content: space-around;
-    height:80%;
+    height:60%;
 }
 
 .container__dados ul{
     list-style: none;
+
+}
+
+.logo{
+    width: 150px;
+}
+
+.container__social{
+    position: relative;
+    bottom: 5px;
+}
+
+.social ul{
+    list-style: none;
+}
+
+.social ul li{
+    display:inline-block;
 
 }
 
