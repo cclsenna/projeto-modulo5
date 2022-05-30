@@ -6,10 +6,11 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <Header/>
+      {/* <Header/> */}
       <Footer/>
     </div>
   )
 }
 
 export default App;
+

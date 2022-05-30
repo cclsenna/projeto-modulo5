@@ -1,43 +1,110 @@
+@font-face {
+    font-family: "Indie Flower";
+    src: url("../../assets/fonts/IndieFlower-Regular.ttf");
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Indie+Flower&family=Permanent+Marker&display=swap');
+
 .container{
     background-color:#07a0c3;
     height:700px;
     width: 100%;
-    position: relative;
-    bottom:0;
-    margin-top:50px;
+    position: absolute;
+    bottom:0px;
+    right: 0px;
     color:#ffffff;
-    padding: 15px;
-    box-sizing: border-box;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    gap:2rem;     
 
 }
 
-.container__dados{
-    display: flex;
-    flex-direction:column;
-    justify-content: space-around;
-    height:60%;
+.container__info,.container__contato{
+    width: fit-content;
 }
 
-.container__dados ul{
+.container__info ul,.container__contato ul{
     list-style: none;
+    line-height: 1.75rem;
+}
 
+
+.container__info li:first-child,.container__contato li:first-child{
+    font-weight: bold;
 }
 
 .logo{
     width: 150px;
 }
 
+.container__logo{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+}
+
+.container__endereco p{
+    line-height: 3rem;
+}
+
 .container__social{
     position: relative;
-    bottom: 5px;
 }
 
-.social ul{
-    list-style: none;
+.copyrights{
+    font-size:0.9rem
 }
 
-.social ul li{
-    display:inline-block;
+
+
+
+
+
+.social__links{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    width: 9rem;
+    list-style:none;
 
 }
+
+.social__links img{
+    width: 30px;
+    cursor:pointer;
+}
+
+.mapa{
+    position: static;
+    width: 250px;
+    height:150px;
+
+}
+
+@media (min-width:700px){
+
+    .container{
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows:1fr 1fr
+    }
+
+    .container__endereco p{
+        line-height: 1.5rem;
+    }
+
+    .mapa{
+        width: 350px;
+        height:250px;
+    }
+    
+
+
+
+
+}
+
 
