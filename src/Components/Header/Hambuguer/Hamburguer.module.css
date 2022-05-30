@@ -5,7 +5,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.container__hamburguer {
+  position: absolute;
+  z-index: 20;
+  right: 0;
+}
 .menu {
   border-radius: 50%;
   width: 60px;
@@ -17,7 +21,7 @@
 .hamburguer {
   position: relative;
   display: block;
-  background: #000;
+  background: #fff;
   width: 30px;
   height: 2px;
   top: 29px;
@@ -27,7 +31,7 @@
 
 .hamburguer:before,
 .hamburguer:after {
-  background: #000;
+  background: #fff;
   content: '';
   display: block;
   width: 100%;
@@ -60,4 +64,9 @@ input:checked ~ label .hamburguer:before {
 input:checked ~ label .hamburguer:after {
   transform: rotate(90deg);
   bottom: 0;
+}
+@media (min-width:768px) {
+  .container__hamburguer {
+    display: none;
+  }
 }

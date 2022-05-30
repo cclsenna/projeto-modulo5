@@ -1,0 +1,11 @@
+.lista {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+@media(min-width:768px) {
+   .lista{
+       font-size: 20px;
+   } 
+}
