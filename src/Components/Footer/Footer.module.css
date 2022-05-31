@@ -85,7 +85,7 @@
 @media (min-width:700px){
 
     .container{
-        padding: 0.8rem 20%;
+        padding: 0.8rem 2.5rem;
         grid-template-columns: 1fr 1fr 1fr ;
         grid-template-rows:1fr 60px;
     }
@@ -104,6 +104,30 @@
     }
 
 }
+
+@media (min-width:1000px){
+    .container{
+        padding: 1rem 5rem;
+    }
+}
+
+@media  (min-width:1200px){
+    .container{
+        padding:1.2rem 20%;
+    }
+
+}
+
+@media (min-width:1400px){
+    .container{
+        padding:1.2rem 25%;
+    }
+
+
+
+}
+
+
 
 
 
