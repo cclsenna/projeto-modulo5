@@ -4,21 +4,21 @@
 }
 
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Indie+Flower&family=Permanent+Marker&display=swap');
 
 .container{
     background-color:#07a0c3;
-    height:700px;
+    height:fit-content;
     width: 100%;
-    position: absolute;
-    bottom:0px;
-    right: 0px;
     color:#ffffff;
-    padding: 20px;
+    padding: 0.5rem 1.5rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:1fr 1fr 1fr 1fr;
-    gap:2rem;     
+    grid-template-rows:140px 140px 200px 80px;
+    gap:1.9rem;
+    font-size: 14px; 
 
 }
 
@@ -47,11 +47,11 @@
 }
 
 .container__endereco p{
-    line-height: 3rem;
+    /* line-height: 1.2rem; */
 }
 
-.container__social{
-    position: relative;
+.container__social p{
+    margin-bottom:8px;
 }
 
 .copyrights{
@@ -80,8 +80,9 @@
 
 .mapa{
     position: static;
-    width: 250px;
-    height:150px;
+    width: 100%;
+    height:166px;
+    border: none;
 
 }
 

@@ -30,6 +30,7 @@ function Footer() {
                 <li>Telefone 1: 219999999</li>
                 <li>Telefone 2: 2199999999</li>
                 <li>Whatsapp: 21999999999</li>
+                <li>Email : secretaria@efh.com.br</li>
             </ul> 
 
         </section>          
