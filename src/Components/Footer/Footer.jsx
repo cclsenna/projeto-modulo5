@@ -54,15 +54,17 @@ function Footer() {
 
 
         <section className={styles.container__social}>
+            <ul className={styles.social__links}>
+                        <li><img src={linkedin} alt="Logo do linkedin"/></li>
+                        <li><img src={insta} alt="Logo do instagram"/></li>
+                        <li><img src={face} alt="Logo do facebook"/></li>
+                        <li><img src={youtube} alt="Logo do youtube"/></li>
+            </ul>
+            
             <p className={styles.copyrights}>Projeto desenvolvido para fins educacionais – Grupo 4 – Resilia Educação | 2022</p>
 
 
-                <ul className={styles.social__links}>
-                    <li><img src={linkedin} alt="Logo do linkedin"/></li>
-                    <li><img src={insta} alt="Logo do instagram"/></li>
-                    <li><img src={face} alt="Logo do facebook"/></li>
-                    <li><img src={youtube} alt="Logo do youtube"/></li>
-                </ul>
+
 
 
             

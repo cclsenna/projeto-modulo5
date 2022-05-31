@@ -48,6 +48,7 @@
 
 .container__endereco p{
     /* line-height: 1.2rem; */
+    font-weight: 700;
 }
 
 .container__social p{
@@ -57,11 +58,6 @@
 .copyrights{
     font-size:0.9rem
 }
-
-
-
-
-
 
 .social__links{
     display: flex;
@@ -89,8 +85,9 @@
 @media (min-width:700px){
 
     .container{
+        padding: 0.8rem 20%;
         grid-template-columns: 1fr 1fr 1fr ;
-        grid-template-rows:1fr 1fr
+        grid-template-rows:1fr 60px;
     }
 
     .container__endereco p{
@@ -101,11 +98,12 @@
         width: 350px;
         height:250px;
     }
-    
 
-
-
+    .container__social{
+        grid-column:span 3; 
+    }
 
 }
+
 
 
