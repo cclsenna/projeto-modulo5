@@ -12,8 +12,8 @@ function App() {
     <div className={styles.container}>
       {/* <Header/> */}
       {/* <Footer/> */}
-      <CardFunc texto="Cadastrar Novos Alunos" textoAlt="imagem de teste" url={imgCreate} />
-      <CardFunc texto="Buscar e Editar" textoAlt="imagem de teste" url={imgSearch} />
+      {/* <CardFunc texto="Cadastrar Novos Alunos" textoAlt="imagem de teste" url={imgCreate} /> */}
+      {/* <CardFunc texto="Buscar e Editar" textoAlt="imagem de teste" url={imgSearch} /> */}
 
     </div>
   )
