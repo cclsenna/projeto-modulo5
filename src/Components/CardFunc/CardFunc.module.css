@@ -1,0 +1,18 @@
+.container{
+    width: 220px;
+    height:220px;
+    border: 2px solid #000000;
+    margin: 50px auto;
+    border-radius:10px;
+
+
+}
+
+.container__imagem{
+    width:100%;
+}
+
+img{
+    width: 120px;
+    height:auto;
+}
