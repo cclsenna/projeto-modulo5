@@ -7,13 +7,18 @@ function CardFunc({url,texto,textoAlt}) {
     <div className={styles.container}>
 
         <div className={styles.container__imagem}>
+            
             <img src={url} alt={textoAlt} />
         </div>
 
-        <p>{texto}</p>
+        <div className={styles.container__desc}>
+            <p>{texto}</p>
+
+        </div>
+
 
     </div>
   )
 }
 
-export default CardFunc
+export default CardFunc;
