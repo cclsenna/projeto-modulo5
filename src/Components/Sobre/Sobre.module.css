@@ -1,3 +1,53 @@
+.Conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 20px;
+}
 .title{
     font-family: Indie;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 40px;
+}
+
+.TextoImg{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.textoSobre{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    vertical-align: middle;
+    width: 100%;
+    height: 80%;
+    font-family: Indie;    
+    }
+.imgSobre{
+    width: 100%;
+    height: auto;
+    margin: 2%;
+}
+
+@media (min-width:770px) {
+    .TextoImg{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    .textoSobre{
+        width: 30%;
+        height: auto;
+        line-height: 2;
+        font-size: 18px;
+    }
+.imgSobre{
+    width: 50%;
+    }
+    
 }
