@@ -3,7 +3,10 @@ import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer.jsx'
 import CardFunc from './Components/CardFunc/CardFunc.jsx';
 import imgCreate from './assets/imgs/img_Create.png'
-import imgSearch from './assets/imgs/img_search.svg'
+import imgSearch from './assets/imgs/img_search.svg';
+import CardAluno from './Components/CardAluno/CardAluno.jsx';
+import cris from './assets/imgs/735216.png';
+import Botao from './Components/Botao/Botao.jsx';
 
 
 function App() {
@@ -14,7 +17,8 @@ function App() {
       {/* <Footer/> */}
       {/* <CardFunc texto="Cadastrar Novos Alunos" textoAlt="imagem de teste" url={imgCreate} /> */}
       {/* <CardFunc texto="Buscar e Editar" textoAlt="imagem de teste" url={imgSearch} /> */}
-
+      {/* <CardAluno nome="Cristiano Ronaldo" textoAlt="teste" url={cris} turma="13" /> */}
+      <Botao/>
     </div>
   )
 }
