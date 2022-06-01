@@ -20,16 +20,17 @@
 }
 
 .nav__ul {
-  background-color: #07a1c3d0;
+  background-color: #07a1c3e0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   list-style: none;
   position: fixed;
   top: 0;
   right: 0;
   height: 100%;
   width: 100%;
+  z-index: 10;
 }
 .open {
   transition: transform 0.5s ease-in-out;

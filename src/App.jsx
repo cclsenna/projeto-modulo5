@@ -1,3 +1,6 @@
+import "./App.css";
+import Header from "./Components/Header/Header";
+import Home from "./pages/Home/Home";
 import styles from './App.module.css'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer.jsx'
@@ -10,17 +13,12 @@ import Botao from './Components/Botao/Botao.jsx';
 
 
 function App() {
-
   return (
-    <div className={styles.container}>
-      {/* <Header/> */}
-      {/* <Footer/> */}
-      {/* <CardFunc texto="Cadastrar Novos Alunos" textoAlt="imagem de teste" url={imgCreate} /> */}
-      {/* <CardFunc texto="Buscar e Editar" textoAlt="imagem de teste" url={imgSearch} /> */}
-      {/* <CardAluno nome="Cristiano Ronaldo" textoAlt="teste" url={cris} turma="13" /> */}
-      <Botao texto="caio"/>
+    <div className="App">
+      <Header />
+      <Home />
     </div>
-  )
+  );
 }
 
 export default App;
