@@ -18,7 +18,7 @@ function App() {
       {/* <CardFunc texto="Cadastrar Novos Alunos" textoAlt="imagem de teste" url={imgCreate} /> */}
       {/* <CardFunc texto="Buscar e Editar" textoAlt="imagem de teste" url={imgSearch} /> */}
       {/* <CardAluno nome="Cristiano Ronaldo" textoAlt="teste" url={cris} turma="13" /> */}
-      <Botao/>
+      <Botao texto="caio"/>
     </div>
   )
 }

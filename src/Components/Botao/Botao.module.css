@@ -11,8 +11,9 @@ button {
     font-size: 17px;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    transition: all 250ms;
+    transition: all 750ms;
     overflow: hidden;
+    cursor: pointer;
    }
    
    button::before {
@@ -23,11 +24,11 @@ button {
     height: 100%;
     width: 0;
     border-radius: 15px;
-    background-color: #212121;
+    background-color: rgba(255, 255, 255,0.3);
     z-index: -1;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    transition: all 250ms
+    transition: all 750ms
    }
    
    button:hover {
