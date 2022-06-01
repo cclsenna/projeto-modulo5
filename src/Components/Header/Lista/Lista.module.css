@@ -3,9 +3,19 @@
     text-align: center;
     font-weight: bold;
     color: #fff;
+    border-bottom: 2px #fff solid;
+}
+.lista p {
+    margin-bottom: 5rem;
+    line-height: 10px;
 }
 @media(min-width:768px) {
    .lista{
        font-size: 20px;
+       border: none;
    } 
+   .lista p {
+    margin-bottom: 0;
+    line-height: 0px;
+    }
 }
