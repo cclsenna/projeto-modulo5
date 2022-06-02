@@ -1,0 +1,10 @@
+.destaques {
+  margin-top: 5rem;
+}
+
+@media (min-width: 760px) {
+  .destaques {
+    margin-top: 10rem;
+  }
+}
+
