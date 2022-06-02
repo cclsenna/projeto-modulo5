@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @keyframes tonext {
   75% {
     left: 0;
@@ -97,7 +97,6 @@ li {
 }
 .container__slideOne {
   display: flex;
-
 }
 
 .carousel__slide {
@@ -139,7 +138,6 @@ li {
   position: relative;
   top: 60%;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   text-align: center;
   align-self: center;
@@ -148,19 +146,19 @@ li {
   color: #fff;
 }
 .container__titulo2 p {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 22px;
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
   max-width: 200px;
-  margin: .5rem 0 0 4.5rem;
+  margin: 0.5rem 0 0 4.5rem;
 }
 .container__titulo2 h2 {
-  margin: .5rem 0 0 4.5rem;
+  margin: 0.5rem 0 0 4.5rem;
 }
 .container__titulo3 {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .container__titulo3 h2 {
   color: #fff;
@@ -290,6 +288,9 @@ height: 100%;
   }
 }
 @media (min-width: 760px) {
+  .carousel {
+    padding: 0;
+  }
   .carousel::before,
   .carousel::after,
   .carousel__prev,
@@ -300,17 +301,20 @@ height: 100%;
     font-size: 30px;
   }
   .container__titulo2 p {
-  margin: 1.5rem 0 0 10rem;
-}
-.container__titulo2 h2 {
-  margin: 1.5rem 0 0 10rem;
-}
-.container__titulo3 h2 {
-  font-size: 30px;
-  width: 20rem;
-}
+    margin: 1.5rem 0 0 10rem;
+  }
+  .container__titulo2 h2 {
+    margin: 1.5rem 0 0 10rem;
+  }
+  .container__titulo3 h2 {
+    font-size: 30px;
+    width: 20rem;
+  }
 }
 @media (min-width: 1100px) {
+  .carousel {
+    padding: 0;
+  }
   .carousel__viewport {
     height: 60vh;
   }
@@ -335,6 +339,9 @@ height: 100%;
   }
 }
 @media (min-width: 1400px) {
+  .carousel {
+    padding: 0;
+  }
   .carousel__viewport {
     height: 65vh;
   }
@@ -356,7 +363,7 @@ height: 100%;
     margin: 2rem 0 0 20rem;
   }
   .container__titulo3 h2 {
-    
+    text-align: center;
     font-size: 40px;
     width: 30rem;
   }
