@@ -1,10 +1,15 @@
-.destaques {
-  margin-top: 5rem;
+.home {
+  background-color: #D8D2CB;
+  padding-bottom: 5.5rem;
 }
-
 @media (min-width: 760px) {
   .destaques {
-    margin-top: 10rem;
+    margin: 5rem 0 5rem 0;
+  }
+}
+@media (min-width: 1100px) {
+  .destaques {
+    margin: 10rem 0 5rem 0;
   }
 }
 
