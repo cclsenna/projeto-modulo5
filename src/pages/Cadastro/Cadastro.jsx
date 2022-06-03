@@ -7,19 +7,18 @@ export default function Cadastro() {
       <h1>Cadastrar Aluno</h1>
       <form action="#" className={styles.formulario}>
         <fieldset className={styles.identificacao}>
-
+          <h2>Identificação</h2>
 
           <Input type={"text"} labelname="Nome" req={true} />
           <Input type={"text"} labelname="Sobrenome" req={true} />
           <div className={styles.nascimento}>
-            <Input type={"date"} labelname="Data de Nascimento" req={""} />
+            <Input type={"date"} labelname="Data de Nascimento" req={''} />
           </div>
-        </fieldset>
-        <fieldset className={styles.contato}>
-
-          <Input type={"tel"} labelname="Telefone" req={true} />
+          <Input type={"text"} labelname="Telefone" req={true} />
           <Input type={"email"} labelname="Email" req={true} />
           <Input type={"url"} labelname="Foto URL" req={true} />
+          <Input type={"text"} labelname="Turma" req={true} />
+          <Input type={"text"} labelname="Professor" req={true} />
         </fieldset>
 
         <fieldset className={styles.endereco}>
@@ -34,25 +33,6 @@ export default function Cadastro() {
         </fieldset>
         <Botao texto="Cadastrar" />
       </form>
-      {/* 
-        Nome	text	
-        Sobrenome	text
-        Data de nascimento 	date
-
-
-        endereço:
-        rua 
-        bairro
-        num 
-
-
-        Contato 	fone
-        Contato 2 	fone
-        turma 		text
-        professor	text
-        foto url 	text
-
-        btn cadastrar */}
     </section>
   );
 }

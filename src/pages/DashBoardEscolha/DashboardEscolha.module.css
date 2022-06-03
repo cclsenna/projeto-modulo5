@@ -1,0 +1,25 @@
+
+
+.container{
+    text-align:center;
+    padding-top: 2rem;
+    background-color:#D8D2CB;
+}
+
+
+.container h1{
+    font-size:1.5rem;
+}
+
+
+.container__func{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+@media (min-width:700px){
+    .container__func{
+        flex-direction:row;
+    }
+}
