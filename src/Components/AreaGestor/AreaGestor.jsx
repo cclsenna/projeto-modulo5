@@ -16,7 +16,7 @@ function AreaGestor() {
        </label>
         <section className={styles.btnAreaGestor}>
        <button className={styles.btnConectese}>Conecte-se</button>
-    <button className={styles.btnConectar-google}>Conectar com o Google</button>
+    <button className={styles.btnConectarGoogle}>Conectar com o Google</button>
        </section>    
     
      </form>
