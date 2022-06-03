@@ -13,13 +13,21 @@ import  {
 } from "react-router-dom";
 import Home from "../pages/Home/Home.jsx";
 
+
+
+
+
+
 function Routes() {
   return (
     <Router>    
       <div className={styles.container}>
         <Header/>
             <Switch> 
-                <Route path="/" element={<Home />} />            
+                <Route path="/" element={<Home />} />
+                <Route path="/dashboard" element={<DashboardEscolha />} /> 
+                {/* <Route path="/sobre" element={<Sobre />} />   */}
+ 
 
 
             </Switch>
