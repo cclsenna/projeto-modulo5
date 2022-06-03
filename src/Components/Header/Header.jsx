@@ -3,6 +3,9 @@ import styles from "./Header.module.css";
 import Hamburguer from "./Hambuguer/Hamburguer";
 import logo from "../../assets/imgs/logo.png";
 import { useState } from "react";
+import  {
+  Link
+} from "react-router-dom";
 
 export default function Header() {
   const listas = ["Home", "Sobre", "Contato", "Área do Gestor"];

@@ -1,13 +1,16 @@
-body{
-    width: 100%;
-}
-
 .container{
     min-height:100vh;
     width: 100%;
     display:flex;
     justify-content: space-between;
     flex-direction:column;
+}
 
+Link:visited{
+    color:black;
 
+}
+
+Link:link{
+    color:black;
 }
