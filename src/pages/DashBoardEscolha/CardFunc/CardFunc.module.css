@@ -8,6 +8,7 @@
     flex-direction:column;
     justify-content:space-between;
     overflow: hidden;
+    background-color:#ffffff;
 
 
 }
@@ -45,3 +46,4 @@ img{
 .container__desc:hover{
     background-color: rgba(7, 160, 195,0.75);
 }
+
