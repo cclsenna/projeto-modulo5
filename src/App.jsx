@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.module.css";
 import AreaGestor from "./Components/AreaGestor/AreaGestor";
 import Header from "./Components/Header/Header";
 import Home from "./pages/Home/Home";
@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Sobre />
+      {/* <Sobre /> */}
       <AreaGestor />
-      <Home />
+      {/* <Home /> */}
       <Footer />
     </div>
   );
