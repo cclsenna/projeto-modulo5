@@ -1,11 +1,10 @@
-/* From uiverse.io by @alexroumi */
 button {
     padding: 15px 25px;
     border: unset;
     border-radius: 15px;
-    color: #ffffff;
+    color: #07a0c3;
     z-index: 1;
-    background: #07a0c3;
+    background: #fff;
     position: relative;
     font-weight: 1000;
     font-size: 17px;
@@ -24,7 +23,7 @@ button {
     height: 100%;
     width: 0;
     border-radius: 15px;
-    background-color: rgba(255, 255, 255,0.3);
+    background-color: rgba(7, 161, 195, 0.39);
     z-index: -1;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
@@ -32,7 +31,7 @@ button {
    }
    
    button:hover {
-    color: #e8e8e8;
+    color: #07a0c3;
    }
    
    button:hover::before {
