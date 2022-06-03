@@ -2,7 +2,7 @@ import Lista from "./Lista/Lista";
 import styles from "./Header.module.css";
 import Hamburguer from "./Hambuguer/Hamburguer";
 import logo from "../../assets/imgs/logo.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Header() {
   const listas = ["Home", "Sobre", "Contato", "Área do Gestor"];

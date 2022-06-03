@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Indie Flower";
+    src: url("../../assets/fonts/IndieFlower-Regular.ttf");
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Indie+Flower&family=Permanent+Marker&display=swap');
+
+.container{
+    background-color:#07a0c3;
+    height:fit-content;
+    width: 100%;
+    color:#ffffff;
+    padding: 0.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:140px 140px 200px 80px;
+    gap:1.9rem;
+    font-size: 14px; 
+
+}
+
+.container__info,.container__contato{
+    width: fit-content;
+}
+
+.container__info ul,.container__contato ul{
+    list-style: none;
+    line-height: 1.75rem;
+}
+
+
+.container__info li:first-child,.container__contato li:first-child{
+    font-weight: bold;
+}
+
+.logo{
+    width: 150px;
+}
+
+.container__logo{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+}
+
+.container__endereco p{
+    /* line-height: 1.2rem; */
+    font-weight: 700;
+}
+
+.container__social p{
+    margin-bottom:8px;
+}
+
+.copyrights{
+    font-size:0.9rem
+}
+
+.social__links{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    width: 9rem;
+    list-style:none;
+
+}
+
+.social__links img{
+    width: 30px;
+    cursor:pointer;
+}
+
+.mapa{
+    position: static;
+    width: 100%;
+    height:166px;
+    border: none;
+
+}
+
+@media (min-width:700px){
+
+    .container{
+        padding: 0.8rem 2.5rem;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows:1fr 60px;
+    }
+
+    .container__endereco p{
+        line-height: 1.5rem;
+    }
+
+    .mapa{
+        width: 350px;
+        height:250px;
+    }
+
+    .container__social{
+        grid-column:span 3; 
+    }
+
+}
+
+@media (min-width:1000px){
+    .container{
+        padding: 1rem 5rem;
+    }
+}
+
+@media  (min-width:1200px){
+    .container{
+        padding:1.2rem 20%;
+    }
+
+}
+
+@media (min-width:1400px){
+    .container{
+        padding:1.2rem 25%;
+    }
+
+
+
+}
+
+
+
+
+
