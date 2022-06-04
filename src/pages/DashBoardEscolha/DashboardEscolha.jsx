@@ -6,7 +6,7 @@ import imgSearch from '../../assets/imgs/img_search.svg';
 
 function DashboardEscolha() {
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
         <h1>Escolha de funcionalidade</h1>
 
         <div className={styles.container__func}>
@@ -16,7 +16,7 @@ function DashboardEscolha() {
 
         </div>
 
-    </div>
+    </main>
   )
 }
 
