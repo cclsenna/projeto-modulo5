@@ -3,17 +3,44 @@ import getApi from '../../../../services/api';
 import styles from './InputBusca.module.css';
 
 const InputBusca=({textoPlaceholder,setDados})=> {
-    const [busca,setBusca]=useState('');
+    const [busca,setBusca]=useState('');    
+    
+    useEffect( () =>{
+      async function buscar(){
+        const retorno= await getApi();
+        setDados(retorno);
+        return;  
+      }
 
-    useEffect(()=>{
-      getApi();
+      buscar();
+
 
     },[]);
 
-    useEffect(()=>{
-      getApi();
+     
+    useEffect( ()  =>{
+      async function buscar(){
+        const retorno= await getApi();
+        setDados(retorno);
+        return;
+  
+      }
+      buscar();
 
-    },[busca])
+
+    },[busca]);
+
+
+
+    // useEffect(()=>{
+    //   const retorno=getApi();
+    //   props.setDados([...retorno]);
+
+    // },[busca])
+
+
+
+
 
 
   return (
