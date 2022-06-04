@@ -2,14 +2,18 @@ import React, { useEffect, useState } from 'react';
 import getApi from '../../../../services/api';
 import styles from './InputBusca.module.css';
 
-const InputBusca=({textoPlaceholder})=> {
+const InputBusca=({textoPlaceholder,setDados})=> {
     const [busca,setBusca]=useState('');
 
     useEffect(()=>{
       getApi();
-      console.log('depois de rodar');
 
     },[]);
+
+    useEffect(()=>{
+      getApi();
+
+    },[busca])
 
 
   return (

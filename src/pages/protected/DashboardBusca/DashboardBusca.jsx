@@ -6,7 +6,7 @@ import cris from '../../../assets/imgs/735216.png';
 
 function DashboardBusca() {
 
-    const [busca,setBusca]=useState('');
+    const [dados,setDados]=useState('');
 
   return (
     <div className={styles.container}>
