@@ -6,7 +6,7 @@ import logoAreaGestor from '../../assets/imgs/logoAreaGestor.png'
 function AreaGestor() {
   return (
    <main className={styles.containerAreaGestor}>
-     <img className={styles.logoAreaGestor} src={logoAreaGestor}/>
+    <img className={styles.logoAreaGestor} src={logoAreaGestor}/>
      <h1  className={styles.titleAreaGestor}>Acesse área do gestor</h1>
      <h2 className={styles.subTitleAreaGestor}> Ainda não tem conta? <a className={styles.paragrafo1} href="#">Cadastre-se</a></h2>
      <form className={styles.formsAreaGestor}>
@@ -20,7 +20,8 @@ function AreaGestor() {
        </section>    
     
      </form>
-     <h2 className={styles.subtitleEsqueceu}>Esqueceu sua senha? <a href="#">A gente te ajuda.</a></h2>
+     <h3 className={styles.subtitleEsqueceu}>Esqueceu sua senha? <a className={styles.paragrafo2} href="#">A gente te ajuda.</a></h3>
+     
    </main>
     
     

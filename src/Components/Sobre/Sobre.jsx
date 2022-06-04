@@ -5,8 +5,7 @@ import imgsobre from '../../assets/imgs/imgsobre.png'
 function Sobre() {
   return (
     <main className={styles.Conteudo}>
-        <h1 className={styles.title}>Sobre a Escola</h1>
-                        
+        <h1 className={styles.title}>Sobre a Escola</h1>                       
 
         <section className={styles.TextoImg}>
             <article className={styles.textoSobre}>
