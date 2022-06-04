@@ -1,23 +1,42 @@
 .lista {
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-    border-bottom: 2px #fff solid;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 2px #fff solid;
 }
-.lista p {
-    margin-bottom: 5rem;
-    line-height: 10px;
+.lista a {
+  line-height: 10px;
+  text-decoration: none;
+  color: #fff;
 }
 
-
-@media(min-width:768px) {
-   .lista{
-       font-size: 20px;
-       border: none;
-   } 
-   .lista p {
+@media (min-width: 768px) {
+  .lista {
+    font-size: 20px;
+    border: none;
+  }
+  .lista a {
     margin-bottom: 0;
     line-height: 0px;
-    }
+  }
+  .lista a {
+    position: relative;
+  }
+  .lista a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .lista a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
