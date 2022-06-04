@@ -12,7 +12,7 @@ import  {
   Link
 } from "react-router-dom";
 import Home from "../pages/Home/Home.jsx";
-
+import Cadastro from "../pages/Cadastro/Cadastro.jsx";
 
 
 
@@ -24,14 +24,15 @@ function Routes() {
       <div className={styles.container}>
         <Header/>
             <Switch> 
-                <Route path="/" element={<Home />} />
-                <Route path="/dashboard" element={<DashboardEscolha />} /> 
-                {/* <Route path="/sobre" element={<Sobre />} />   */}
- 
+                <Route path="/home" element={<Home/>} /> 
+                <Route path="/sobre" element={''} /> 
+                <Route path="/" element={<Home/>} /> 
+                 {/* <Route path="/sobre" element={<Sobre />} />   */}
+        
 
 
             </Switch>
-         
+            
         <Footer/>       
 
       </div>    
