@@ -31,7 +31,7 @@ function Routes() {
                 <Route path="/home" element={<Home/>} /> 
                 <Route path="/sobre" element={''} /> 
                 <Route path="/" element={<Home/>} /> 
-                 {/* <Route path="/sobre" element={<Sobre />} />   */}
+                 <Route path="/dashboard-busca" element={<DashboardBusca />} />  
         
 
 

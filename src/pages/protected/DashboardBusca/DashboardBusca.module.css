@@ -1,7 +1,8 @@
 .container{
-    width: 300px;
+    width: 100%;
     align-self: center;
     text-align: center;
+    padding: 20px;
 
 }
 
@@ -9,12 +10,50 @@ h1{
     font-family: Indie;
 }
 
+.container__botao{
+    width: 300px;
+    margin: 0 auto;
+}
 
-@media (min-width:820px){
+.container__alunos{
+    width: 70%;
+    display:grid;
+    grid-template-columns:1fr;
+    gap: 50px;
+    margin:20px auto;
+}
 
-    .container{
+
+@media (min-width:750px){
+
+    .container__alunos{
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+
+@media (min-width:1000px){
+
+    .container__alunos{
+        grid-template-columns:1fr 1fr 1fr;
+
+    }
+
+    .container__botao{
         width: 500px;
-    
+        margin: 0 auto;
+    }
+
+}
+
+
+@media (min-width:1500px){
+
+    .container__alunos{
+        grid-template-columns:1fr 1fr 1fr 1fr;
+
     }
 
 }

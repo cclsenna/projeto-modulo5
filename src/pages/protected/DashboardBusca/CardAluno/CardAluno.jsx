@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './CardAluno.module.css';
-import edit from '../../assets/imgs/icons8-edit.svg';
+import edit from '../../../../assets/imgs/icons8-edit.svg';
 
 function CardAluno({url,nome,textoAlt,turma}) {
   return (
-    <div className={`${styles.card} ${styles.work}`}>
+    <div className={styles.card}>
       <div className={styles.img__section}>
         <p>Turma 13 - Manhã</p>
       </div>
