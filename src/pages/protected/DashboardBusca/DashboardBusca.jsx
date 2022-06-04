@@ -9,18 +9,12 @@ function DashboardBusca() {
   const[dados,setDados]=useState([]);
 
 
-    useEffect(()=>{
-      console.log('mudou');
-      console.log(dados);
-
-    },[dados]);
-
 
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
         <div className={styles.container__botao}>
             <h1>Busca e Edição</h1>
-            <InputBusca textoPlaceholder="Buscar aluno" setDados={setDados}/>
+            <InputBusca textoPlaceholder="Buscar aluno por nome" setDados={setDados}/>
         </div>
 
           <ul className={styles.container__alunos}>
@@ -30,7 +24,7 @@ function DashboardBusca() {
 
 
 
-    </div>
+    </main>
   )
 }
 

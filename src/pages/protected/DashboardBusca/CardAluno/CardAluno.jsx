@@ -9,20 +9,20 @@ function CardAluno({info}) {
       return (<li key={element.matricula}> 
       <div className={styles.card}>
         <div className={styles.img__section}>
-          <p>Turma 13 - Manhã</p>
+          <p>{`Matrícula ${element.matricula}`}</p>
         </div>
       <div className={styles.card__desc}>
         <div className={styles.card__header}>
           <div className={styles.card__title}>
             <p>{`${element.nome} ${element.sobrenome}`}</p>
-            <p>{`Matrícula ${element.matricula}`}</p>
+            <p>{`Matrícula N°${element.matricula}`}</p>
           </div>
         </div>
 
         <div className={styles.card__info}>
         
         <div className={styles.card__time}>
-          <img src={element.foto} alt="ss" />
+          <img src={element.foto} alt="Imagem Aluno" />
         </div>
 
         

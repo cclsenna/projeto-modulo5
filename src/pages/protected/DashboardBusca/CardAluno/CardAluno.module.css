@@ -125,4 +125,13 @@
 
    @media (min-width:800px){
 
+    .card__title {
+        font-size: 1em;
+    }
+    
+    .card__title p:nth-child(2){
+        font-size: 0.8em;
+    }
+       
+
    }

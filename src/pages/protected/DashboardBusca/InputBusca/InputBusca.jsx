@@ -9,6 +9,7 @@ const InputBusca=({textoPlaceholder,setDados})=> {
       async function buscar(){
         const retorno= await getApi();
         setDados(retorno);
+
         return;  
       }
 
@@ -21,7 +22,15 @@ const InputBusca=({textoPlaceholder,setDados})=> {
     useEffect( ()  =>{
       async function buscar(){
         const retorno= await getApi();
-        setDados(retorno);
+        const teste=JSON.stringify(retorno);
+        JSON.parse
+        const filtrado=retorno.filter((element)=>{
+          if(element.nome.toLowerCase().includes(busca.toLowerCase())||element.sobrenome.toLowerCase().includes(busca.toLowerCase())) return true;
+          else return false;          
+
+        });
+        
+        setDados(filtrado);
         return;
   
       }

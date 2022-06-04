@@ -30,8 +30,8 @@ function Routes() {
             <Switch> 
                 <Route path="/home" element={<Home/>} /> 
                 <Route path="/sobre" element={''} /> 
-                <Route path="/" element={<Home/>} /> 
-                 <Route path="/dashboard-busca" element={<DashboardBusca />} />  
+                <Route path="/" element={<Home/>} />
+                <Route path="/dashboard-busca" element={<DashboardBusca />} />  
         
 
 
