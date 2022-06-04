@@ -1,3 +1,20 @@
 .container{
-    width: 400px;
+    width: 300px;
+    align-self: center;
+    text-align: center;
+
+}
+
+h1{
+    font-family: Indie;
+}
+
+
+@media (min-width:820px){
+
+    .container{
+        width: 500px;
+    
+    }
+
 }
