@@ -17,7 +17,7 @@ export default function Cadastro() {
           <Input type={"text"} labelname="Telefone" req={true} />
           <Input type={"email"} labelname="Email" req={true} />
           <Input type={"url"} labelname="Foto URL" req={true} />
-          <Input type={"text"} labelname="Turma" req={true} />
+          <Input type={"text"} labelname="Turno" req={true} />
           <Input type={"text"} labelname="Professor" req={true} />
         </fieldset>
 

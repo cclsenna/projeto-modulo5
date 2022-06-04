@@ -8,7 +8,7 @@ export default function Lista ({listas}) {
         {listas.map((lista,index) => (
             
             <li className={styles.lista} key={index}>
-                <p><Link to="/">{lista}</Link></p>
+                <Link to={"/"+lista.toLowerCase()}>{lista}</Link>
             </li>
         ))}
         </>
