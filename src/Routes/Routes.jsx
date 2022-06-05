@@ -14,10 +14,6 @@ import  {
 import Home from "../pages/Home/Home.jsx";
 import Cadastro from "../pages/Cadastro/Cadastro.jsx";
 
-
-
-
-
 function Routes() {
   return (
     <Router>    
@@ -25,20 +21,16 @@ function Routes() {
         <Header/>
             <Switch> 
                 <Route path="/home" element={<Home/>} /> 
-                <Route path="/sobre" element={''} /> 
+                <Route path="/sobre" element={<Cadastro/>} /> 
                 <Route path="/" element={<Home/>} /> 
                  {/* <Route path="/sobre" element={<Sobre />} />   */}
-        
-
-
+ 
             </Switch>
             
         <Footer/>       
 
       </div>    
     </Router>
-
-
 
   );
 }
