@@ -18,10 +18,6 @@ import DashboardBusca from "../pages/protected/DashboardBusca/DashboardBusca.jsx
 
 import Cadastro from "../pages/Cadastro/Cadastro.jsx";
 
-
-
-
-
 function Routes() {
   return (
     <Router>    
@@ -29,6 +25,7 @@ function Routes() {
         <Header/>
             <Switch> 
                 <Route path="/home" element={<Home/>} /> 
+
                 <Route path="/sobre" element={''} /> 
                 <Route path="/" element={<Home/>} />
                 <Route path="/dashboard-busca" element={<DashboardBusca />} />  
@@ -41,8 +38,6 @@ function Routes() {
 
       </div>    
     </Router>
-
-
 
   );
 }
