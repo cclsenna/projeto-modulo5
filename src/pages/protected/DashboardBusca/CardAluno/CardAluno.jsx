@@ -1,8 +1,16 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import styles from './CardAluno.module.css';
 import edit from '../../../../assets/imgs/icons8-edit.svg';
 
 function CardAluno({info}) {
+  const[status,setStatus]=useState('');
+
+  useEffect(()=>{
+    console.log(status);
+
+  },[status]);
+
+
   return (
     info.map((element,index)=>{
       
@@ -26,7 +34,7 @@ function CardAluno({info}) {
         </div>
 
         
-        <div className={styles.card__edit}>
+        <div className={styles.card__edit} onClick={()=>setStatus(`esse é o ${element.nome}`)}>
           <img src={edit} />
         </div>
       </div>
