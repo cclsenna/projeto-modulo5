@@ -6,7 +6,7 @@
     width: 200px;
     height: 170px;
     border-radius: 10px;
-    margin:100px auto 0;
+    margin: 0 auto;
    }
    
    .card {
@@ -124,5 +124,14 @@
    
 
    @media (min-width:800px){
+
+    .card__title {
+        font-size: 1em;
+    }
+    
+    .card__title p:nth-child(2){
+        font-size: 0.8em;
+    }
+       
 
    }
