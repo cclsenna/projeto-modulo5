@@ -10,7 +10,6 @@
   border-radius: .5rem;
   padding: .7em 0 .7rem .7rem;
   font-size: 16px;
-  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .user_label {
   position: absolute;
@@ -19,23 +18,24 @@
   font-weight: bold;
   pointer-events: none;
   font-size: 14px;
-  transform: translateY(.7rem);
-  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-1.5rem);
+}
+.span {
+  position: absolute;
+  left: 15px;
+  color: black;
+  font-weight: bold;
+  pointer-events: none;
+  font-size: 14px;
+  transform: translateY(-1.5rem);
+}
+.option {
+  color: black;
 }
 .input:focus,
 input:valid {
   outline: none;
   border: 1.5px solid #1a73e8;
-}
-.input:focus ~ label,
-input:valid ~ label {
-  transform: translateY(-100%) scale(0.8);
-  font-size: 18px;
-  font-weight: bold;
-  text-align: left;
-  white-space: nowrap;
-  padding: 0 .2em;
-  color: #fff;
 }
 @media (min-width: 760px) {
   .input_group {
@@ -46,6 +46,6 @@ input:valid ~ label {
     font-size: 18px;
   }
   .user_label {
-    transform: translateY(.8rem);
+    transform: translateY(-1.5rem);
   }
 }
