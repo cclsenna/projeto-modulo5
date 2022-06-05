@@ -24,7 +24,7 @@ export default function Destaques() {
           imagem={vida}
           p1="Ensino bilíngue"
           p2="Design de games"
-          p3="Campus arbonizado"
+          p3="Campus arborizado"
           p4="Biblioteca parque"
           p5="Sala de leitura"
         />
