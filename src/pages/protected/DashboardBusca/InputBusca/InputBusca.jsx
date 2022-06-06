@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import getApi from '../../../../services/api';
+import {getApi} from '../../../../services/api';
 import styles from './InputBusca.module.css';
 
 const InputBusca=({textoPlaceholder,setDados})=> {
@@ -24,14 +24,11 @@ const InputBusca=({textoPlaceholder,setDados})=> {
           if(element.nome.toLowerCase().includes(busca.toLowerCase())||element.sobrenome.toLowerCase().includes(busca.toLowerCase())) return true;
           else return false;          
 
-        });
-        
+        });        
         setDados(filtrado);
-        return;
-  
+        return;  
       }
       buscar();
-
 
     },[busca]);
 
@@ -42,11 +39,6 @@ const InputBusca=({textoPlaceholder,setDados})=> {
     //   props.setDados([...retorno]);
 
     // },[busca])
-
-
-
-
-
 
   return (
 <div className={styles.group}>

@@ -12,10 +12,10 @@ function DashboardBusca() {
   //estado apra indicar se o modal deve ser exibido ou não e a info que precisa 
   const [modalEdit,setModalEdit]=useState([false,{}]);
 
-  useEffect(()=>{
-    console.log('printando o estado do modal');
-    console.log(modalEdit);
-  },[modalEdit]);
+  // useEffect(()=>{
+  //   console.log('printando o estado do modal');
+  //   console.log(modalEdit);
+  // },[modalEdit]);
 
 
 
