@@ -14,7 +14,14 @@ const postAPi=async (dados)=>{
 
 const deleteApi=async (matricula)=>{
     const url='https://app-escola-resilia.herokuapp.com/alunos';
-    return data;
+
+    const response=await fetch(`https://app-escola-resilia.herokuapp.com/alunos/${matricula}`, {
+      method: "DELETE"      
+      }
+      );
+     
+    console.log(response);
+    return response;
 }
 
 

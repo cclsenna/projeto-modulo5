@@ -3,15 +3,9 @@ import styles from './CardAluno.module.css';
 import edit from '../../../../assets/imgs/icons8-edit.svg';
 import ModalDados from '../ModalDados/ModalDados';
 
-function CardAluno({info}) {
+function CardAluno({info,setModal}) {
   const[status,setStatus]=useState('');
 
-  const [modal,setModal]=useState(false);
-
-
-
-
-  //vai fazer a troca do modal
 
 
   return (
@@ -37,14 +31,13 @@ function CardAluno({info}) {
         </div>
 
         
-        <div className={styles.card__edit} onClick={(e)=>setModal(element.matricula)}>
+        <div className={styles.card__edit} onClick={()=>setModal([true,element])}>
           <img src={edit} />
         </div>
       </div>
       </div>
     </div>
 
-    <ModalDados dados={element} modal={modal} setModal={setModal} />
 
 
       
