@@ -1,14 +1,17 @@
 import React,{useState,useEffect} from 'react';
 import styles from './CardAluno.module.css';
 import edit from '../../../../assets/imgs/icons8-edit.svg';
+import ModalDados from '../ModalDados/ModalDados';
 
 function CardAluno({info}) {
   const[status,setStatus]=useState('');
 
-  useEffect(()=>{
-    console.log(status);
+  const [modal,setModal]=useState(false);
 
-  },[status]);
+
+
+
+  //vai fazer a troca do modal
 
 
   return (
@@ -34,12 +37,16 @@ function CardAluno({info}) {
         </div>
 
         
-        <div className={styles.card__edit} onClick={()=>setStatus(`esse é o ${element.nome}`)}>
+        <div className={styles.card__edit} onClick={(e)=>setModal(element.matricula)}>
           <img src={edit} />
         </div>
       </div>
       </div>
     </div>
+
+    <ModalDados dados={element} modal={modal} setModal={setModal} />
+
+
       
     </li>)
 

@@ -6,8 +6,15 @@
 
 }
 
-const postAPi=async ()=>{
-    return;
+const postAPi=async (dados)=>{
+    const url='https://app-escola-resilia.herokuapp.com/alunos';
+    return data;
+}
+
+
+const deleteApi=async (matricula)=>{
+    const url='https://app-escola-resilia.herokuapp.com/alunos';
+    return data;
 }
 
 
