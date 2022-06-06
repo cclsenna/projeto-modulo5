@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Botao from "../../Components/Botao/Botao";
 import Input from "../../Components/Input/Input";
 import Select from "../../Components/Input/Select";
@@ -9,6 +9,7 @@ import validaCampos from "../../services/validaCampos";
 export default function Cadastro() {
   const turnos = ["Manhã", "Tarde"];
   const professores = ["Haroldo","Ricardo","Patrícia","Flávia","Karlla","Marluce","Cláudia","Lúcia","Vinícius"];
+  const ref = useRef(null);
   const [cep, setCep] = useState({});
   const[validacao, setvalidacao] = useState('');
   function handleSubmit(e) {
@@ -44,10 +45,10 @@ export default function Cadastro() {
           <h2>Endereço</h2>
 
           <Input type={"text"} name={"cep"} onBlur={handleCep} labelname="CEP" req={""}/>
-          <Input type={"text"} name={"rua"} labelname="Rua" value={cep.logradouro}/>
-          <Input type={"text"} name={"bairro"} labelname="Bairro" value={cep.bairro}/>
-          <Input type={"text"} name={"cidade"} labelname="Cidade" value={cep.localidade}/>
-          <Input type={"text"} name={"estado"} labelname="Estado" value={cep.uf} req={""} />
+          <Input type={"text"} name={"rua"} labelname="Rua" onChange={()=>{''}} value={cep.logradouro || ''} req={""}/>
+          <Input type={"text"} name={"bairro"} labelname="Bairro" onChange={()=>{''}} value={cep.bairro || ''} req={""}/>
+          <Input type={"text"} name={"cidade"} labelname="Cidade" onChange={()=>{''}} value={cep.localidade || ''} req={""}/>
+          <Input type={"text"} name={"estado"} labelname="Estado" onChange={()=>{''}} value={cep.uf || ''} req={""} />
           <Input type={"text"} name={"numero"} labelname="Número" req={""} />
         </fieldset>
         <Botao texto="Cadastrar" />
