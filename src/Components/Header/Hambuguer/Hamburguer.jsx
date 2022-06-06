@@ -2,7 +2,7 @@ import styles from "./Hamburguer.module.css"
 export default function Hamburguer({onClick}) {
   return (
     <section  className={styles.container__hamburguer}>
-      <input onClick={onClick} id="menu-hamburguer"  type="checkbox" />
+      <input onClick={onClick} className={styles.menu_hamburguer} id="menu-hamburguer"  type="checkbox" />
 
       <label htmlFor="menu-hamburguer">
         <div  className={styles.menu}>
