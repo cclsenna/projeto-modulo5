@@ -40,7 +40,7 @@ function Footer() {
 
          <section className={styles.container__endereco}>
                 <p>Endereço : Av. Dias da Cruz, 520, Méier, Rio de Janeiro, RJ</p>
-                <iframe className={styles.mapa} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.2292349286895!2d-43.2945906705361!3d-22.904914195612793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997da0648ce775%3A0x854b465f587cd32!2sR.%20Dias%20da%20Cruz%2C%20520%20-%20M%C3%A9ier%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020720-013!5e0!3m2!1sen!2sbr!4v1653937218101!5m2!1sen!2sbr" allowFullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe className={styles.mapa} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.2292349286895!2d-43.2945906705361!3d-22.904914195612793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997da0648ce775%3A0x854b465f587cd32!2sR.%20Dias%20da%20Cruz%2C%20520%20-%20M%C3%A9ier%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020720-013!5e0!3m2!1sen!2sbr!4v1653937218101!5m2!1sen!2sbr" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
             </section> 
 

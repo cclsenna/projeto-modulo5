@@ -4,7 +4,9 @@ import CardFunc from "../pages/DashBoardEscolha/CardFunc/CardFunc.jsx";
 import imgCreate from "../assets/imgs/img_Create.png";
 import imgSearch from "../assets/imgs/img_search.svg";
 import DashboardEscolha from "../pages/DashBoardEscolha/DashboardEscolha";
+
 import styles from "../App.module.css";
+
 import  {
   BrowserRouter as Router,
   Routes as Switch,
@@ -14,9 +16,7 @@ import  {
 import Home from "../pages/Home/Home.jsx";
 import Cadastro from "../pages/Cadastro/Cadastro.jsx";
 import Sobre from "../pages/Sobre/Sobre.jsx";
-
-
-
+import DashboardBusca from "../pages/protected/DashboardBusca/DashboardBusca.jsx";
 
 
 function Routes() {
@@ -29,7 +29,7 @@ function Routes() {
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/" element={<Home/>} /> 
                  <Route path="/dashboardescola" element={<DashboardEscolha/>}/>  
-        
+                <Route path="/dashboard-busca" element={<DashboardBusca />} />     
 
 
             </Switch>
@@ -38,8 +38,6 @@ function Routes() {
 
       </div>    
     </Router>
-
-
 
   );
 }
