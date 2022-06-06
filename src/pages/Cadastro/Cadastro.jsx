@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Botao from "../../Components/Botao/Botao";
 import Input from "../../Components/Input/Input";
 import Select from "../../Components/Input/Select";
@@ -9,7 +9,7 @@ import validaCampos from "../../services/validaCampos";
 export default function Cadastro() {
   const turnos = ["Manhã", "Tarde"];
   const professores = ["Haroldo","Ricardo","Patrícia","Flávia","Karlla","Marluce","Cláudia","Lúcia","Vinícius"];
-  const ref = useRef(null);
+
   const [cep, setCep] = useState({});
   const[validacao, setvalidacao] = useState('');
   function handleSubmit(e) {
