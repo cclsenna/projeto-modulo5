@@ -35,7 +35,7 @@
   color: #fff;
 }
 .notCadastrado {
-  color: red;
+  color: rgb(190, 41, 41);
   font-weight: bold;
   letter-spacing: 1px;
 }
