@@ -17,6 +17,7 @@ import Home from "../pages/Home/Home.jsx";
 import Cadastro from "../pages/Cadastro/Cadastro.jsx";
 import Sobre from "../pages/Sobre/Sobre.jsx";
 import DashboardBusca from "../pages/protected/DashboardBusca/DashboardBusca.jsx";
+import AreaGestor from "../pages/AreaGestor/AreaGestor.jsx";
 
 
 function Routes() {
@@ -29,7 +30,8 @@ function Routes() {
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/" element={<Home/>} /> 
                  <Route path="/dashboardescola" element={<DashboardEscolha/>}/>  
-                <Route path="/dashboard-busca" element={<DashboardBusca />} />     
+                <Route path="/dashboard-busca" element={<DashboardBusca />} />
+                <Route path="areagestor" element={<AreaGestor />} />
 
 
             </Switch>

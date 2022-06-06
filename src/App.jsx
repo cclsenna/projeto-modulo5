@@ -1,5 +1,5 @@
 import "./App.module.css";
-import AreaGestor from "./Components/AreaGestor/AreaGestor";
+import AreaGestor from "./pages/AreaGestor/AreaGestor";
 import Header from "./Components/Header/Header";
 import Home from "./pages/Home/Home";
 import Footer from "./Components/Footer/Footer.jsx";
