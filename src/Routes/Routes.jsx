@@ -25,8 +25,7 @@ function Routes() {
         <Header/>
             <Switch> 
                 <Route path="/home" element={<Home/>} /> 
-
-                <Route path="/sobre" element={''} /> 
+                <Route path="/sobre" element={<Cadastro/>} /> 
                 <Route path="/" element={<Home/>} />
                 <Route path="/dashboard-busca" element={<DashboardBusca />} />  
         
