@@ -8,7 +8,7 @@ export default function Home() {
       <section className={styles.carrossel}>
         <Carrossel />
       </section>
-        <AreaGestor />
+        
       <section className={styles.destaques}>
         <Destaques />
       </section>

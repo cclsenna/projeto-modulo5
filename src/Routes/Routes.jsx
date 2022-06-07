@@ -4,9 +4,7 @@ import CardFunc from "../pages/DashBoardEscolha/CardFunc/CardFunc.jsx";
 import imgCreate from "../assets/imgs/img_Create.png";
 import imgSearch from "../assets/imgs/img_search.svg";
 import DashboardEscolha from "../pages/DashBoardEscolha/DashboardEscolha";
-
 import styles from "../App.module.css";
-
 import  {
   BrowserRouter as Router,
   Routes as Switch,
@@ -14,23 +12,31 @@ import  {
   Link
 } from "react-router-dom";
 import Home from "../pages/Home/Home.jsx";
-import Cadastro from "../pages/Cadastro/Cadastro.jsx";
+
 import Sobre from "../pages/Sobre/Sobre.jsx";
 import DashboardBusca from "../pages/protected/DashboardBusca/DashboardBusca.jsx";
-
+import AreaGestor from "../Components/AreaGestor/AreaGestor.jsx";
+import Cadastro from "../pages/Cadastro/Cadastro.jsx";
+import Loading from "../Components/Loading/Loading.jsx";
+import { useState } from "react";
 
 function Routes() {
+ const [fade, setFade] = useState(true)
+ 
   return (
-    <Router>    
+   
+    <Router>
+      <Loading/>   
       <div className={styles.container}>
         <Header/>
             <Switch> 
                 <Route path="/home" element={<Home/>} /> 
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/" element={<Home/>} /> 
+               
                  <Route path="/dashboardescola" element={<DashboardEscolha/>}/>  
                 <Route path="/dashboard-busca" element={<DashboardBusca />} />     
-
+                <Route path="/areadogestor" element={<AreaGestor />}></Route>
 
             </Switch>
             
@@ -38,7 +44,7 @@ function Routes() {
 
       </div>    
     </Router>
-
+   
   );
 }
 

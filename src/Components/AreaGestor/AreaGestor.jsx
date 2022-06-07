@@ -22,14 +22,10 @@ function AreaGestor() {
         validatorEmail(email.value) === true &&
         validatorPassword(password.value) === true
       ) {
-        console.log(email.value);
-        console.log(password.value);
         textForm.textContent = "";
         textEmail.textContent = "";
         textPassword.textContent = "";
         navigate('/dashboardescola')
-      } else {
-        console.log("Requisição não atendida");
       }
     
       e.preventDefault();
@@ -72,6 +68,9 @@ function AreaGestor() {
 
   
   return (
+    <div className={styles.container}>
+
+    
     <main className={styles.containerAreaGestor}>
       <img className={styles.logoAreaGestor} src={logoAreaGestor} />
       <h1 className={styles.titleAreaGestor}>Acesse área do gestor</h1>
@@ -130,6 +129,7 @@ function AreaGestor() {
         </a>
       </h3>
     </main>
+    </div>
   );
 }
 
