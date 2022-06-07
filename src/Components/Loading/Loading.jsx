@@ -10,8 +10,8 @@ export default function Loading() {
           <div className={styles.right}></div>
         </div>
         <ul>
-          {pags.map(() => (
-            <li></li>
+          {pags.map((_,i) => (
+            <li key={i}></li>
           ))}
         </ul>
       </div>

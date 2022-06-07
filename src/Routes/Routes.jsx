@@ -12,8 +12,10 @@ import  {
   Link
 } from "react-router-dom";
 import Home from "../pages/Home/Home.jsx";
-import DashboardBusca from "../pages/protected/DashboardBusca/DashboardBusca.jsx";
 
+import Sobre from "../pages/Sobre/Sobre.jsx";
+import DashboardBusca from "../pages/protected/DashboardBusca/DashboardBusca.jsx";
+import AreaGestor from "../Components/AreaGestor/AreaGestor.jsx";
 import Cadastro from "../pages/Cadastro/Cadastro.jsx";
 import Loading from "../Components/Loading/Loading.jsx";
 import { useState } from "react";
@@ -29,11 +31,12 @@ function Routes() {
         <Header/>
             <Switch> 
                 <Route path="/home" element={<Home/>} /> 
-                <Route path="/sobre" element={<Cadastro/>} /> 
-                <Route path="/" element={<Home/>} />
-                <Route path="/dashboard-busca" element={<DashboardBusca />} />  
-        
-
+                <Route path="/sobre" element={<Sobre />} />
+                <Route path="/" element={<Home/>} /> 
+               
+                 <Route path="/dashboardescola" element={<DashboardEscolha/>}/>  
+                <Route path="/dashboard-busca" element={<DashboardBusca />} />     
+                <Route path="/areadogestor" element={<AreaGestor />}></Route>
 
             </Switch>
             

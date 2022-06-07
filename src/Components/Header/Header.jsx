@@ -11,8 +11,8 @@ export default function Header() {
   return (
     <header className={styles.container__cabecalho}>
       <article className={styles.container__logo}>
-        <h1 className={styles.cabecalho__titulo}>Escola Holandesa do Méier</h1>
-        <img src={logo} className={styles.logo} alt="logo-EHM" />
+        <h1 className={styles.cabecalho__titulo}>Colégio São Cristovão</h1>
+        <img src={logo} className={styles.logo} alt="logo-CSC" />
       </article>
       <Hamburguer onClick={showOrHide} />
       <nav className={styles.nav__container}>
