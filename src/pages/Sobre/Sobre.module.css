@@ -2,13 +2,15 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
-    margin: 20px;
+    background-color: #f1eeeb;
+    height: 100vh;
 }
 .title{
     font-family: Indie;
     align-items: center;
     margin: 0 auto;
     font-size: 40px;
+    color: #413f42;
 }
 
 .TextoImg{
