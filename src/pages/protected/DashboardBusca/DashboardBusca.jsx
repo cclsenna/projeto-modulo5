@@ -13,6 +13,9 @@ function DashboardBusca() {
   //estado apra indicar se o modal deve ser exibido ou não e a info que precisa 
   const [modalEdit,setModalEdit]=useState([false,{}]);
 
+
+  
+
   useEffect(()=>{
     async function buscar(){
       const retorno= await getApi();
@@ -20,7 +23,7 @@ function DashboardBusca() {
       return;  
     }
 
-    
+
     buscar();
   },[dados]);
 

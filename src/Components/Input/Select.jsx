@@ -6,7 +6,7 @@ export default function Select(props) {
       <select 
       name={props.name}
       className={styles.input}
-      selected="Marluce"
+      value={props.value}
       >
 
         {props.context.map((el, index) => (

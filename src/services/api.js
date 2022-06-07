@@ -29,7 +29,6 @@ export const putAPi=async (dados)=>{
       nota_portugues: dados.nota_portugues,
       nota_artes: dados.nota_artes,
       nota_edfisica: dados.nota_edfisica
-
     });
     
     console.log('dentro da putApi');
@@ -58,12 +57,12 @@ export const putAPi=async (dados)=>{
 
 
 export const deleteApi=async (matricula)=>{
-    const url='https://app-escola-resilia.herokuapp.com/alunos';
 
-    const response=await fetch(`https://app-escola-resilia.herokuapp.com/alunos/${matricula}`, {
+    const response=await fetch(`https://app-escola-resilia.herokuapp.com/alun/${matricula}`, {
       method: "DELETE"      
       }
       );
+      console.log(response)
      
     return response;
 }
