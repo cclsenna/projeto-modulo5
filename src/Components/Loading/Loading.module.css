@@ -774,7 +774,6 @@ html {
   animation-name:fadeOut;
     animation-duration: 7s;
     animation-fill-mode: forwards;
-    /* visibility: hidden; */
 }
 
 .loading__container .dribbble {
