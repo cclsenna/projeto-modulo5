@@ -27,10 +27,22 @@
   border: none;
 }
 .identificacao h2 {
-  margin-top: 2rem;
+  margin: 2rem 0;
+  text-align: center;
 }
-.identificacao h2, .endereco {
-    color: #fff;
+.identificacao h2,
+.endereco {
+  color: #fff;
+}
+.notCadastrado {
+  color: rgb(190, 41, 41);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.cadastrado {
+  color: greenyellow;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 .nascimento {
   max-width: 60%;
@@ -42,7 +54,7 @@
 @media (min-width: 760px) {
   .formulario {
     max-width: 900px;
-    max-height: 800px;
+    max-height: 1000px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -56,7 +68,7 @@
     grid-template-rows: repeat(3, 12%);
     grid-column: 1 / span 2;
     gap: 2rem;
-    margin: 2rem auto;
+    margin: 2.5rem auto 5rem auto;
   }
   .identificacao h2 {
     margin: 0rem 0;
@@ -73,7 +85,9 @@
     margin: 0 auto;
   }
   .identificacao h2,
-  .endereco h2 {
+  .endereco h2,
+  .notCadastrado,
+  .cadastrado {
     grid-column: 1 / span 2;
     text-align: center;
   }

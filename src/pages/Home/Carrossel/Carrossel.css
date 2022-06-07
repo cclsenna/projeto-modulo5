@@ -295,7 +295,7 @@ li {
   .carousel::after,
   .carousel__prev,
   .carousel__next {
-    margin-top: 20%;
+    margin-top: 18%;
   }
   .container__titulo1 h2 {
     font-size: 30px;

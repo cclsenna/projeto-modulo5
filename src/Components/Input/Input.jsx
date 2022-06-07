@@ -7,7 +7,9 @@ export default function Input(props) {
         required={props.req}
         name={props.name}
         value={props.value}
+       defaultValue={props.defaultValue}
         onBlur={props.onBlur}
+        onChange={props.onChange}
         list={props.list}
         type={props.type}
         disabled={props.disabled}
