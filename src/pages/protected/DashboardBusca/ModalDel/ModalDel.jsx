@@ -31,7 +31,7 @@ function ModalDel({dados,modal,setModal,setModalInfo,infoModal}) {
 
         else if(btn==='Sim'&&infoModal.tipo==='update'){
             const api=async()=>{
-                const resposta=await updateApi(dados.matricula);
+                const resposta=await updateApi(dados);
             }
             api();
             setModalConf([true,dados]);

@@ -6,11 +6,31 @@
 
 }
 
-export const putAPi=async (matricula)=>{
+export const putAPi=async (dados)=>{
     const url='https://app-escola-resilia.herokuapp.com/alunos';
 
-    const response=await fetch(`https://app-escola-resilia.herokuapp.com/alunos/${matricula}`, {
-      method: "PUT"      
+    const response=await fetch(`https://app-escola-resilia.herokuapp.com/alunos/${dados.matricula}`, {
+      method: "PUT",
+      headers: new Headers({
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      }),
+      body: JSON.stringify({
+        nome: dados.nome,
+        sobrenome: dados.sobrenome,
+        dataNascimento: dados.dataNascimento,
+        tel: dados.telefone,
+        email: dados.email,
+        foto: dados.foto,
+        id_professor: dados.professor,
+        turno: dados.turno == 1? "M":"T",
+        cep: dados.cep,
+        rua: dados.rua,
+        bairro: dados.bairro,
+        cidade: dados.cidade,
+        uf: dados.estado,
+        numero: dados.numero,
+      })   
       }
       );
      
