@@ -7,7 +7,7 @@
 }
 .container__hamburguer {
   position: absolute;
-  z-index: 20;
+  z-index: 3;
   right: 0;
 }
 .menu {

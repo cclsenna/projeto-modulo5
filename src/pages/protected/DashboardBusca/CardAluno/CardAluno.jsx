@@ -1,8 +1,13 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import styles from './CardAluno.module.css';
 import edit from '../../../../assets/imgs/icons8-edit.svg';
+import ModalDados from '../ModalDados/ModalDados';
 
-function CardAluno({info}) {
+function CardAluno({info,setModal}) {
+  const[status,setStatus]=useState('');
+
+
+
   return (
     info.map((element,index)=>{
       
@@ -26,12 +31,20 @@ function CardAluno({info}) {
         </div>
 
         
-        <div className={styles.card__edit}>
+        <div className={styles.card__edit} onClick={()=>{
+          setModal([true,element]);
+          console.log('elemento');
+          console.log(element);
+
+        }}>
           <img src={edit} />
         </div>
       </div>
       </div>
     </div>
+
+
+
       
     </li>)
 

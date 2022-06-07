@@ -17,7 +17,7 @@ function Footer() {
         <section className={styles.container__info}>
             <ul>
                 <li>Sobre a Escola</li>
-                <li>Sobre a Escola Holandesa</li>
+                <li>Sobre a São Cristovão</li>
                 <li>Proposta Pedagógica</li>
                 <li>Nossos Diferenciais</li>
                 <li>Metodologia</li>
@@ -30,7 +30,7 @@ function Footer() {
                 <li>Telefone 1: 219999999</li>
                 <li>Telefone 2: 2199999999</li>
                 <li>Whatsapp: 21999999999</li>
-                <li>Email : secretaria@efh.com.br</li>
+                <li>Email : secretaria@csc.com.br</li>
             </ul> 
 
         </section>          

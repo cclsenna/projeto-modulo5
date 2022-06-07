@@ -3,10 +3,31 @@ import InputBusca from './InputBusca/InputBusca';
 import styles from './DashboardBusca.module.css';
 import CardAluno from './CardAluno/CardAluno.jsx';
 import cris from '../../../assets/imgs/735216.png';
+import ModalDados from './ModalDados/ModalDados';
+import { getApi } from '../../../services/api';
 
 function DashboardBusca() {
 
   const[dados,setDados]=useState([]);
+
+  //estado apra indicar se o modal deve ser exibido ou não e a info que precisa 
+  const [modalEdit,setModalEdit]=useState([false,{}]);
+
+
+  
+
+  useEffect(()=>{
+    async function buscar(){
+      const retorno= await getApi();
+      setDados(retorno);
+      return;  
+    }
+
+
+    buscar();
+  },[dados]);
+
+
 
 
 
@@ -18,8 +39,10 @@ function DashboardBusca() {
         </div>
 
           <ul className={styles.container__alunos}>
-              <CardAluno info={dados} />          
+              <CardAluno info={dados} setModal={setModalEdit} />          
           </ul>
+
+          <ModalDados dados={modalEdit[1]} modal={modalEdit[0]} setModal={setModalEdit} />
 
 
 

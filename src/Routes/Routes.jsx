@@ -5,14 +5,8 @@ import imgCreate from "../assets/imgs/img_Create.png";
 import imgSearch from "../assets/imgs/img_search.svg";
 import DashboardEscolha from "../pages/DashBoardEscolha/DashboardEscolha";
 import styles from "../App.module.css";
-import  {
-  BrowserRouter as Router,
-  Routes as Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import  {  BrowserRouter as Router,  Routes as Switch,  Route,  Link} from "react-router-dom";
 import Home from "../pages/Home/Home.jsx";
-
 import Sobre from "../pages/Sobre/Sobre.jsx";
 import DashboardBusca from "../pages/protected/DashboardBusca/DashboardBusca.jsx";
 import AreaGestor from "../Components/AreaGestor/AreaGestor.jsx";
