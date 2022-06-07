@@ -11,7 +11,8 @@
   width: 20%;
 }
 .logo {
-  width: 50px;
+  width: 45px;
+  height: 45px;
   margin-left: 1rem;
 }
 .cabecalho__titulo {
@@ -44,17 +45,19 @@
 }
 @media (min-width: 768px) {
   .container__logo {
-    width: 35%;
+    width: 30%;
   }
   .cabecalho__titulo {
     display: block;
     width: 70%;
     color: #fff;
     text-align: center;
+    font-size: 30px;
   }
   .logo {
-    width: 50px;
-    margin: 0 0 1rem;
+    width: 60px;
+    height: 60px;
+    margin: 0 0 .5rem;
   }
   .nav__container {
     width: 50%;
