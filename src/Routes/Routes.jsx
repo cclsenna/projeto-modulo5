@@ -4,9 +4,7 @@ import CardFunc from "../pages/DashBoardEscolha/CardFunc/CardFunc.jsx";
 import imgCreate from "../assets/imgs/img_Create.png";
 import imgSearch from "../assets/imgs/img_search.svg";
 import DashboardEscolha from "../pages/DashBoardEscolha/DashboardEscolha";
-
 import styles from "../App.module.css";
-
 import  {
   BrowserRouter as Router,
   Routes as Switch,
@@ -17,10 +15,16 @@ import Home from "../pages/Home/Home.jsx";
 import DashboardBusca from "../pages/protected/DashboardBusca/DashboardBusca.jsx";
 
 import Cadastro from "../pages/Cadastro/Cadastro.jsx";
+import Loading from "../Components/Loading/Loading.jsx";
+import { useState } from "react";
 
 function Routes() {
+ const [fade, setFade] = useState(true)
+ 
   return (
-    <Router>    
+   
+    <Router>
+      <Loading/>   
       <div className={styles.container}>
         <Header/>
             <Switch> 
@@ -37,7 +41,7 @@ function Routes() {
 
       </div>    
     </Router>
-
+   
   );
 }
 
