@@ -31,7 +31,12 @@ function CardAluno({info,setModal}) {
         </div>
 
         
-        <div className={styles.card__edit} onClick={()=>setModal([true,element])}>
+        <div className={styles.card__edit} onClick={()=>{
+          setModal([true,element]);
+          console.log('elemento');
+          console.log(element);
+
+        }}>
           <img src={edit} />
         </div>
       </div>

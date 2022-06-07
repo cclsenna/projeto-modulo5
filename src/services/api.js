@@ -8,6 +8,38 @@
 
 export const putAPi=async (dados)=>{
     const url='https://app-escola-resilia.herokuapp.com/alunos';
+    const dadosJson=JSON.stringify({
+      nome: dados.nome,
+      sobrenome: dados.sobrenome,
+      dataNascimento: dados.dataNascimento,
+      tel: dados.telefone,
+      email: dados.email,
+      foto: dados.foto,
+      id_professor: dados.professor,
+      turno: dados.turno == 1? "M":"T",
+      cep: dados.cep,
+      rua: dados.rua,
+      bairro: dados.bairro,
+      cidade: dados.cidade,
+      uf: dados.estado,
+      numero: dados.numero,
+      nota_historia: dados.nota_historia,
+      nota_matematica: dados.nota_matematica,
+      nota_geografia: dados.nota_geografia,
+      nota_portugues: dados.nota_portugues,
+      nota_artes: dados.nota_artes,
+      nota_edfisica: dados.nota_edfisica
+
+    });
+    
+    console.log('dentro da putApi');
+    console.log(dados);
+
+
+    console.log('vai printar o stringfy');
+    console.log(dadosJson);
+
+
 
     const response=await fetch(`https://app-escola-resilia.herokuapp.com/alunos/${dados.matricula}`, {
       method: "PUT",
@@ -15,22 +47,7 @@ export const putAPi=async (dados)=>{
         "Content-Type": "application/json",
         Accept: "application/json",
       }),
-      body: JSON.stringify({
-        nome: dados.nome,
-        sobrenome: dados.sobrenome,
-        dataNascimento: dados.dataNascimento,
-        tel: dados.telefone,
-        email: dados.email,
-        foto: dados.foto,
-        id_professor: dados.professor,
-        turno: dados.turno == 1? "M":"T",
-        cep: dados.cep,
-        rua: dados.rua,
-        bairro: dados.bairro,
-        cidade: dados.cidade,
-        uf: dados.estado,
-        numero: dados.numero,
-      })   
+      body: dadosJson
       }
       );
      
@@ -48,7 +65,6 @@ export const deleteApi=async (matricula)=>{
       }
       );
      
-    console.log(response);
     return response;
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './ModalDel.module.css';
 import Botao from '../../../../Components/Botao/Botao';
-import {deleteApi} from '../../../../services/api.js'
+import {deleteApi,putAPi} from '../../../../services/api.js'
 import ModalConf from '../ModalConf/ModalConf';
 
 function ModalDel({dados,modal,setModal,setModalInfo,infoModal}) {
@@ -30,8 +30,9 @@ function ModalDel({dados,modal,setModal,setModalInfo,infoModal}) {
         }
 
         else if(btn==='Sim'&&infoModal.tipo==='update'){
+            console.log('aceitou fazaer o update')
             const api=async()=>{
-                const resposta=await updateApi(dados);
+                const resposta=await putAPi(dados);
             }
             api();
             setModalConf([true,dados]);

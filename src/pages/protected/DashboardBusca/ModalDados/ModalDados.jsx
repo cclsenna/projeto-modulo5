@@ -26,6 +26,7 @@ function handleSubmit(e){
         tipo:'update',
         textoNeg:'Não',
         textoPos:'Sim'});
+        console.log('apertou no botao atualizar');
         setModalDel([true,dados]);
 
     }
@@ -58,43 +59,43 @@ function handleSubmit(e){
                     
                 <h2>Identificação</h2>
 
-                <Input type={"text"} name={"nome"} labelname="Nome" req={true} value={dados.nome} />
-                <Input  type={"text"}  name={"sobrenome"} labelname="Sobrenome"  req={true} value={dados.sobrenome} />
+                <Input type={"text"} name={"nome"} labelname="Nome" req={true} value={dados.nome} onChange={()=>{''}} />
+                <Input  type={"text"}  name={"sobrenome"} labelname="Sobrenome"  req={true} value={dados.sobrenome} onChange={()=>{''}} />
 
           <div className={styles.nascimento}>
-            <Input type={"date"} name={"dataNascimento"}  labelname="Data de Nascimento" req={true}   />
+            <Input type={"date"} name={"dataNascimento"}  labelname="Data de Nascimento" req={true} value={(dados.dataNascimento).replaceAll('/','-')}  onChange={()=>{''}}  />
           </div>
 
-          <Input type={"text"}   name={"telefone"} labelname="Telefone" req={true}  value={dados.tel} />
-          <Input type={"email"} name={"email"} labelname="Email" req={true}  value={dados.email} />
-          <Input type={"url"} name={"foto"} labelname="Foto URL" req={true} value={dados.foto} />
-          <Select name={"turno"} select={"Turno"} context={turnos} required={true}/>
-          <Select  name={"professor"} select={"Professor"} context={professores}  />
+          <Input type={"text"}   name={"telefone"} labelname="Telefone" req={true}  value={dados.tel} onChange={()=>{''}} />
+          <Input type={"email"} name={"email"} labelname="Email" req={true}  value={dados.email} onChange={()=>{''}} />
+          <Input type={"url"} name={"foto"} labelname="Foto URL" req={true} value={dados.foto} onChange={()=>{''}} />
+          <Select name={"turno"} select={"Turno"} context={turnos} value={dados.turno==='M'?'1':'2'}  required={true} onChange={()=>{''}}/>
+          <Select  name={"professor"} select={"Professor"} context={professores} value={dados.id_professor} onChange={()=>{''}}  />
         </fieldset>
 
         <fieldset className={styles.endereco}>
           <h2>Endereço</h2>
 
-          <Input  type={"text"}   name={"cep"}     /* onBlur={apiCep}*/   labelname="CEP"    req={true}    value={dados.cep} />
-          <Input  type={"text"} name={"rua"} labelname="Rua" value={cep.logradouro} value={dados.rua}    />
-          <Input  type={"text"} name={"bairro"} labelname="Bairro" value={cep.bairro} value={dados.bairro}   />
+          <Input  type={"text"}   name={"cep"}     /* onBlur={apiCep}*/   labelname="CEP"    req={true}    value={dados.cep} onChange={()=>{''}} />
+          <Input  type={"text"} name={"rua"} labelname="Rua"  value={dados.rua} onChange={()=>{''}}    />
+          <Input  type={"text"} name={"bairro"} labelname="Bairro"  value={dados.bairro} onChange={()=>{''}}   />
 
-          <Input  type={"text"}  name={"cidade"} labelname="Cidade" value={cep.localidade} value={dados.cidade}/>
+          <Input  type={"text"}  name={"cidade"} labelname="Cidade"  value={dados.cidade} onChange={()=>{''}}/>
 
 
-          <Input type={"text"}  name={"estado"} labelname="Estado" value={cep.uf} req={true} value={dados.uf}/>
-          <Input type={"text"} name={"numero"} labelname="Número" req={true} value={dados.numero} />
+          <Input type={"text"}  name={"estado"} labelname="Estado"  req={true} value={dados.uf} onChange={()=>{''}}/>
+          <Input type={"text"} name={"numero"} labelname="Número" req={true} value={dados.numero} onChange={()=>{''}} />
         </fieldset>
 
         <fieldset className={styles.boletim}>
             <h2>Boletim</h2>
 
-            <Input  type={"text"}  name={"estado"}  labelname="Matemática" req={false}  disabled={false}   />
-            <Input  type={"text"}  name={"estado"}  labelname="História" req={false} disabled={false}   />
-            <Input  type={"text"}  name={"estado"}  labelname="Geografia" req={false} disabled={false}    />
-            <Input  type={"text"}  name={"estado"}  labelname="Português" req={false} disabled={false}    />
-            <Input  type={"text"}  name={"estado"}  labelname="Artes" req={false} disabled={false}    />
-            <Input  type={"text"}  name={"estado"}  labelname="Educação Física" req={false} disabled={false}   />
+            <Input  type={"text"}  name={"matematica"}  labelname="Matemática" req={false}  disabled={false} value={dados.nota_matematica} onChange={()=>{''}}   />
+            <Input  type={"text"}  name={"historia"}  labelname="História" req={false} disabled={false} value={dados.nota_historia} onChange={()=>{''}}   />
+            <Input  type={"text"}  name={"geografia"}  labelname="Geografia" req={false} disabled={false} value={dados.nota_geografia} onChange={()=>{''}}    />
+            <Input  type={"text"}  name={"portugues"}  labelname="Português" req={false} disabled={false} value={dados.nota_portugues} onChange={()=>{''}}    />
+            <Input  type={"text"}  name={"artes"}  labelname="Artes" req={false} disabled={false} value={dados.nota_artes} onChange={()=>{''}}    />
+            <Input  type={"text"}  name={"edfisica"}  labelname="Educação Física" req={false} disabled={false} value={dados.nota_edfisica} onChange={()=>{''}}   />
 
 
         </fieldset>
