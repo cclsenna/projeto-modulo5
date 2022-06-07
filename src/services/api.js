@@ -10,14 +10,14 @@ export const putAPi=async (matricula)=>{
     const url='https://app-escola-resilia.herokuapp.com/alunos';
 
     const response=await fetch(`https://app-escola-resilia.herokuapp.com/alunos/${matricula}`, {
-      method: "DELETE"      
+      method: "PUT"      
       }
       );
      
     console.log(response);
     return response;
 }
-}
+
 
 
 export const deleteApi=async (matricula)=>{

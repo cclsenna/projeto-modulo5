@@ -1,32 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './ModalDel.module.css';
 import Botao from '../../../../Components/Botao/Botao';
 import {deleteApi} from '../../../../services/api.js'
+import ModalConf from '../ModalConf/ModalConf';
 
 function ModalDel({dados,modal,setModal,setModalInfo,infoModal}) {
+
+    const[modalConf,setModalConf]=useState([false,{}]);
 
 
     function handleDel(e){
         e.preventDefault();
         const btn=e.nativeEvent.submitter.innerHTML;
-        console.log(btn);
-
         if(btn==='Não'){
             setModal([false,dados]);
             return;
         }
-        else if(btn==='Sim'){
-            console.log('entrou no sim');
-            deleteApi(dados.matricula)
-            .then(response=>{
-                console.log(response.status===200?'deu certo':'deu errado');
-            })
-            setModal([false,dados]);
-            setModalInfo([false,dados]);
+
+
+        else if(btn==='Sim'&&infoModal.tipo==='delete'){
+            const api=async()=>{
+                const resposta=await deleteApi(dados.matricula);
+            }
+
+            api();
+            setModalConf([true,dados]);
+
+            return;
+        }
+
+        else if(btn==='Sim'&&infoModal.tipo==='update'){
+            const api=async()=>{
+                const resposta=await updateApi(dados.matricula);
+            }
+            api();
+            setModalConf([true,dados]);
             return;
         }
 
     }
+
 
     function handleClose(e){
         setModal([false,dados]);
@@ -52,6 +65,7 @@ function ModalDel({dados,modal,setModal,setModalInfo,infoModal}) {
                     
                 </div>
             </form>
+            <ModalConf dados={modalConf[1]} modal={modalConf[0]} setModal={setModalConf} setModalInfo={setModalInfo} setModalDel={setModal}/>
         </div>
 
   )

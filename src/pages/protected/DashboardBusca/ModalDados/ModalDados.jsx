@@ -41,9 +41,6 @@ function handleSubmit(e){
     }
 }
 
-
-
-
 // console.log(dados.dataNascimento.replaceAll('/','-'));
 
 
