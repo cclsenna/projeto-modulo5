@@ -12,7 +12,7 @@ const professores = [  "Haroldo",  "Ricardo",  "Patrícia",  "Flávia",  "Karlla
 
 const [cep, setCep] = useState({});
 
-const [modalDel,setModalDel]=useState([false,{}]);
+const [modalDel,setModalDel]=useState([false,{},'']);
 
 const [infoModal,setInfoModal]=useState({});
 
@@ -31,13 +31,13 @@ const[bairro,setBairro]=useState('');
 const[cidade,setCidade]=useState('');
 const[estado,setEstado]=useState('');
 const[numero,setNumero]=useState('');
-
 const[mat,setMat]=useState('');
 const[hist,setHist]=useState('');
 const[port,setPort]=useState('');
 const[geo,setGeo]=useState('');
 const[artes,setArtes]=useState('');
 const[edf,setEdf]=useState('');
+const[matricula,setMatricula]=useState('');
 
 
 useEffect(()=>{
@@ -62,6 +62,7 @@ useEffect(()=>{
     setGeo(dados.nota_geografia);
     setArtes(dados.nota_artes);
     setEdf(dados.nota_edfisica);
+    setMatricula(dados.matricula);
 
 
  },[modal]);
@@ -73,11 +74,7 @@ useEffect(()=>{
      else if(valor==='T') return '2'; }
 
   function handleProf(nomeProf){
-
-    
-
-    
-      
+         
 
   }
 
@@ -136,7 +133,7 @@ function handleSubmit(e){
                     
                 <h2>Identificação</h2>
 
-                <Input  type={"text"} name={"nome"} labelname="Nome" req={true} value={nome} onChange={(e)=>{setNome(e.target.value)}}/>
+                <Input  type={"text"} data-matricula={matricula} name={"nome"} labelname="Nome" req={true} value={nome} onChange={(e)=>{setNome(e.target.value)}}/>
                 <Input  type={"text"}  name={"sobrenome"} labelname="Sobrenome"  req={true} value={sobrenome} onChange={(e)=>{setSobrenome(e.target.value)}} />
 
           <div className={styles.nascimento}>

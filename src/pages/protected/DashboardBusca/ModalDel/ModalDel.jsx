@@ -30,7 +30,6 @@ function ModalDel({dados,modal,setModal,setModalInfo,infoModal}) {
         }
 
         else if(btn==='Sim'&&infoModal.tipo==='update'){
-            console.log('aceitou fazaer o update')
             const api=async()=>{
                 const resposta=await putAPi(dados);
             }
