@@ -43,12 +43,13 @@ const[edf,setEdf]=useState('');
 useEffect(()=>{
     setNome(dados.nome);
     setSobrenome(dados.sobrenome);
-    setDataNascimento(handleDate());
+    // setDataNascimento(handleDate());
+    setDataNascimento('1987-05-05');
     setTelefone(dados.tel);
     setEmail(dados.email);
     setFoto(dados.foto);
     setTurno(handleTurno(dados.turno));
-    setProfessor(dados.professor);
+    setProfessor('2');
     setCepVal(dados.cep);
     setRua(dados.rua);
     setBairro(dados.bairro);
@@ -69,9 +70,16 @@ useEffect(()=>{
 
  function handleTurno(valor){
      if(valor==='M') return '1';     
-     else if(valor==='T') return '2';     
+     else if(valor==='T') return '2'; }
 
- }
+  function handleProf(nomeProf){
+
+    
+
+    
+      
+
+  }
 
 
 
@@ -89,15 +97,16 @@ function handleSubmit(e){
     e.preventDefault();
     const btn=e.nativeEvent.submitter.innerHTML;
     if(btn==='Atualizar'){
-        console.log(e.target.dataNascimento.value);
+        // console.log(e.target.dataNascimento.value);
+        console.log(e);
 
-        // setInfoModal({titulo:'Atualizar registro',
-        // descricao:'Deseja continaur com a atualização dos dados ?',
-        // tipo:'update',
-        // textoNeg:'Não',
-        // textoPos:'Sim'});
-        // console.log('apertou no botao atualizar');
-        // setModalDel([true,dados]);
+        setInfoModal({titulo:'Atualizar registro',
+        descricao:'Deseja continaur com a atualização dos dados ?',
+        tipo:'update',
+        textoNeg:'Não',
+        textoPos:'Sim'});
+        console.log('apertou no botao atualizar');
+        setModalDel([true,e]);
 
     }
     else if(btn==='Deletar'){

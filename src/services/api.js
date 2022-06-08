@@ -7,36 +7,36 @@
 }
 
 export const putAPi=async (dados)=>{
-    const url='https://app-escola-resilia.herokuapp.com/alunos';
+  console.log('antes de fazer o string');
+  console.log(dados.target[1].nome);
     const dadosJson=JSON.stringify({
-      nome: dados.nome,
-      sobrenome: dados.sobrenome,
-      dataNascimento: dados.dataNascimento,
-      tel: dados.telefone,
-      email: dados.email,
-      foto: dados.foto,
-      id_professor: dados.professor,
-      turno: dados.turno == 1? "M":"T",
-      cep: dados.cep,
-      rua: dados.rua,
-      bairro: dados.bairro,
-      cidade: dados.cidade,
-      uf: dados.estado,
-      numero: dados.numero,
-      nota_historia: dados.nota_historia,
-      nota_matematica: dados.nota_matematica,
-      nota_geografia: dados.nota_geografia,
-      nota_portugues: dados.nota_portugues,
-      nota_artes: dados.nota_artes,
-      nota_edfisica: dados.nota_edfisica
+      nome: dados.target.nome.value,
+      sobrenome: dados.target.sobrenome.value,
+      dataNascimento: dados.target.dataNascimento.value,
+      tel: dados.target.telefone.value,
+      email: dados.target.email.value,
+      foto: dados.target.foto.value,
+      id_professor: dados.target.professor.value,
+      turno: dados.target.turno.value == 1? "M":"T",
+      cep: dados.target.cep.value,
+      rua: dados.target.rua.value,
+      bairro: dados.target.bairro.value,
+      cidade: dados.target.cidadev,
+      uf: dados.target.estado.value,
+      numero: dados.target.numero.value,
+      nota_historia: dados.target.nota_historia.value,
+      nota_matematica: dados.target.nota_matematica.value,
+      nota_geografia: dados.target.nota_geografia.value,
+      nota_portugues: dados.target.nota_portugues.value,
+      nota_artes: dados.target.nota_artes.value,
+      nota_edfisica: dados.target.nota_edfisica.value
     });
     
     console.log('dentro da putApi');
-    console.log(dados);
-
-
-    console.log('vai printar o stringfy');
     console.log(dadosJson);
+
+
+
 
 
 
@@ -58,7 +58,7 @@ export const putAPi=async (dados)=>{
 
 export const deleteApi=async (matricula)=>{
 
-    const response=await fetch(`https://app-escola-resilia.herokuapp.com/alun/${matricula}`, {
+    const response=await fetch(`https://app-escola-resilia.herokuapp.com/alunos/${matricula}`, {
       method: "DELETE"      
       }
       );
