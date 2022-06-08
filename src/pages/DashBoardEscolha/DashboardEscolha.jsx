@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './DashboardEscolha.module.css';
 import CardFunc from './CardFunc/CardFunc.jsx';
-import imgCria from '../../assets/imgs/img_criacao.png';
+import imgCria from '../../assets/imgs/img_criacao.svg';
 import imgSearch from '../../assets/imgs/img_search.svg';
 
 function DashboardEscolha() {
