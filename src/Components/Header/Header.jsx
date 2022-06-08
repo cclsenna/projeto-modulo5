@@ -5,7 +5,7 @@ import logo from "../../assets/imgs/logo.png";
 import { useState } from "react";
 
 export default function Header() {
-  const listas = ["Home", "Sobre", "Contato", "Área do Gestor"];
+  const listas = ["Home", "Sobre", "Área do Gestor"];
   const [show, setShow] = useState(false);
   const showOrHide = () => setShow(!show);
   return (
