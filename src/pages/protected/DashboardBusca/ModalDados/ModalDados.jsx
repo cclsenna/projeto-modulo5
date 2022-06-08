@@ -43,8 +43,8 @@ const[matricula,setMatricula]=useState('');
 useEffect(()=>{
     setNome(dados.nome);
     setSobrenome(dados.sobrenome);
-    // setDataNascimento(handleDate());
-    setDataNascimento('1987-05-05');
+    // setDataNascimento(handleDate(dados.dataNascimento));
+    setDataNascimento(handleDate(dados.dataNascimento)||'1987-05-05');
     setTelefone(dados.tel);
     setEmail(dados.email);
     setFoto(dados.foto);
@@ -82,9 +82,9 @@ useEffect(()=>{
 
 
 function handleDate(){
-    const data=dados.dataNascimento.split('/');
-    const novaData=data.join('-');
-    return novaData;
+    const data=dataNascimento.split('/');
+    const novo=data.join('-');
+    return novo;
 }
 
 
