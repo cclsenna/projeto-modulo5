@@ -1,7 +1,6 @@
 import Header from "../Components/Header/Header.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
 import CardFunc from "../pages/DashBoardEscolha/CardFunc/CardFunc.jsx";
-import imgCreate from "../assets/imgs/img_Create.png";
 import imgSearch from "../assets/imgs/img_search.svg";
 import DashboardEscolha from "../pages/DashBoardEscolha/DashboardEscolha";
 import styles from "../App.module.css";
