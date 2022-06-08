@@ -5,6 +5,7 @@
     padding-top: 2rem;
     background-color:#f1eeeb;
     height: 100%;
+    flex-grow: 3;
 }
 
 

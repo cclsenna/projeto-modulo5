@@ -26,9 +26,11 @@ function Routes() {
                 <Route path="/home" element={<Home/>} /> 
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/" element={<Home/>} />  
-                <Route path="/dashboard-busca" element={<DashboardBusca />} />     
+                <Route path="/dashboard-busca" element={<DashboardBusca />} />
+                <Route path="/cadastro" element={<Cadastro />} />   
+    
               
-                <Route path="/dashboardescolha" element={<DashboardEscolha/>}/>  
+                <Route path="/dashboardescola" element={<DashboardEscolha/>}/>  
                 <Route path="/areadogestor" element={<AreaGestor />} />
 
             </Switch>
