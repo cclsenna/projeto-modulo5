@@ -4,6 +4,7 @@
     text-align: center;
     padding: 20px;
     background-color:#f1eeeb;
+    flex-grow: 3;
 
 }
 

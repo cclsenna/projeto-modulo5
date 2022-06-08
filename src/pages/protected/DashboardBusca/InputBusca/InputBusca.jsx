@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {getApi} from '../../../../services/api';
 import styles from './InputBusca.module.css';
 
-const InputBusca=({textoPlaceholder,setDados})=> {
-    const [busca,setBusca]=useState('');    
+const InputBusca=({textoPlaceholder,setDados,busca,setBusca})=> {
     
     useEffect( () =>{
       async function buscar(){
@@ -11,6 +10,7 @@ const InputBusca=({textoPlaceholder,setDados})=> {
         setDados(retorno);
         return;  
       }
+
       buscar();
 
 

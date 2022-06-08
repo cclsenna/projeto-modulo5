@@ -14,7 +14,7 @@ function CardAluno({info,setModal}) {
       return (<li key={element.matricula}> 
       <div className={styles.card}>
         <div className={styles.img__section}>
-          <p>{`Matrícula ${element.matricula}`}</p>
+          <p>{`Turno da ${element.turno=='M'?'Manhã':'Tarde'}`}</p>
         </div>
       <div className={styles.card__desc}>
         <div className={styles.card__header}>
