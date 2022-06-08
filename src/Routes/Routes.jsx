@@ -26,11 +26,11 @@ function Routes() {
             <Switch> 
                 <Route path="/home" element={<Home/>} /> 
                 <Route path="/sobre" element={<Sobre />} />
-                <Route path="/" element={<Home/>} /> 
-               
-                 <Route path="/dashboardescola" element={<DashboardEscolha/>}/>  
+                <Route path="/" element={<Home/>} />  
                 <Route path="/dashboard-busca" element={<DashboardBusca />} />     
-                <Route path="/areadogestor" element={<AreaGestor />}></Route>
+              
+                <Route path="/dashboardescolha" element={<DashboardEscolha/>}/>  
+                <Route path="/areadogestor" element={<AreaGestor />} />
 
             </Switch>
             
