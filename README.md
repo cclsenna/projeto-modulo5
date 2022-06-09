@@ -25,7 +25,7 @@ Node.Js e Express;.</p>
 # 💻📱 Layout
 
 <div style="width: 100vw; display: flex; justify-content: space-around; align-items: center; margin-bottom: 5rem;">
-<div style="width: 60%; display: flex; flex-direction: column; align-items: center;">
+<div style="width: 35rem; display: flex; flex-direction: column; align-items: center;">
  <p style="text-align:center; font-size: 20px; margin-bottom: 2rem;">💻 Desktop</p>
 <img style=" width: 50rem; height: 25rem;" src="./src/assets/imgs/layoutDesktop.gif" alt="layoutDesktop">
 </div>
