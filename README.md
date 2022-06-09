@@ -34,7 +34,7 @@ Node.Js e Express;.</p>
 </div>
 </div>
 
-# Utilização 
+# 👉🏻 Utilização 
 
 <p style="font-size: 15px">É possível você utilizar o nosso projeto seguindos estes passos:</p>
 <p style="font-size: 15px">Utilize o Git Clone no repositório em uma pasta de sua escolha</p>
