@@ -1,9 +1,10 @@
 import React,{useState,useEffect} from 'react';
 import styles from './ModalDados.module.css';
-import Input from '../../../../Components/Input/Input';
-import Select from '../../../../Components/Input/Select';
-import Botao from '../../../../Components/Botao/Botao';
+import Input from '../../../Components/Input/Input.jsx';
+import Select from '../../../Components/Input/Select';
+import Botao from '../../../Components/Botao/Botao';
 import ModalDel from '../ModalDel/ModalDel';
+import apiCep from '../../../services/apiCep';
 
 function ModalDados({dados,modal,setModal}) {    
 
@@ -43,13 +44,12 @@ const[matricula,setMatricula]=useState('');
 useEffect(()=>{
     setNome(dados.nome);
     setSobrenome(dados.sobrenome);
-    // setDataNascimento(handleDate(dados.dataNascimento));
-    setDataNascimento(handleDate(dados.dataNascimento)||'1987-05-05');
+    setDataNascimento(converteData(dados.dataNascimento));
     setTelefone(dados.tel);
     setEmail(dados.email);
     setFoto(dados.foto);
     setTurno(handleTurno(dados.turno));
-    setProfessor('2');
+    setProfessor(dados.id_professor);
     setCepVal(dados.cep);
     setRua(dados.rua);
     setBairro(dados.bairro);
@@ -68,43 +68,35 @@ useEffect(()=>{
  },[modal]);
 
 
+ function converteData (data) {
 
- function handleTurno(valor){
-     if(valor==='M') return '1';     
-     else if(valor==='T') return '2'; }
-
-  function handleProf(nomeProf){
-         
-
-  }
-
-
-
-
-function handleDate(){
-    const data=dataNascimento.split('/');
-    const novo=data.join('-');
-    return novo;
+    if(!data) return;
+    const traco = `${data.substring(0, 1)}${data.substring(1, 2)}${data.substring(2,3)}${data.substring(3, 4)}-${data.substring(5, 6)}${data.substring(6,7)}-${data.substring(8, 9)}${data.substring(9, 10)}`;
+    let res = traco.split("-");
+    if (res[2].length == 1) {
+      res[2] = "0" + res[2]    
+    }
+    return res.join('-');
 }
 
 
+
+ function handleTurno(valor){
+     if(valor==='M') return '1';     
+     else if(valor==='T') return '2';
+}
 
 
 function handleSubmit(e){
     e.preventDefault();
     const btn=e.nativeEvent.submitter.innerHTML;
     if(btn==='Atualizar'){
-        // console.log(e.target.dataNascimento.value);
-        console.log(e);
-
         setInfoModal({titulo:'Atualizar registro',
         descricao:'Deseja continaur com a atualização dos dados ?',
         tipo:'update',
         textoNeg:'Não',
         textoPos:'Sim'});
-        console.log('apertou no botao atualizar');
         setModalDel([true,e]);
-
     }
     else if(btn==='Deletar'){
         setInfoModal({titulo:'Deletar aluno',
@@ -112,11 +104,19 @@ function handleSubmit(e){
         tipo:'delete',
         textoNeg:'Não',
         textoPos:'Sim'});
-
         setModalDel([true,dados]);
-
     }
 }
+
+async function handleCep(e) {
+    console.log('entrou no handlecep')
+    const api = await apiCep(e.target.value);
+    setRua(api.logradouro);
+    setBairro(api.bairro);
+    setCidade(api.localidade);
+    setEstado(api.uf);
+    
+  }
 
   return (
       <div>
@@ -129,8 +129,7 @@ function handleSubmit(e){
 
                 <form action="#" name="formEdit" className={styles.formulario} onSubmit={handleSubmit}>
 
-                 <fieldset className={styles.identificacao}>
-                    
+                 <fieldset className={styles.identificacao}>                    
                 <h2>Identificação</h2>
 
                 <Input  type={"text"} data-matricula={matricula} name={"nome"} labelname="Nome" req={true} value={nome} onChange={(e)=>{setNome(e.target.value)}}/>
@@ -142,15 +141,15 @@ function handleSubmit(e){
 
           <Input type={"text"}   name={"telefone"} labelname="Telefone" req={true}  value={telefone} onChange={(e)=>{setTelefone(e.target.value)}} />
           <Input type={"email"} name={"email"} labelname="Email" req={true}  value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
-          <Input type={"url"} name={"foto"} labelname="Foto URL" req={true} value={foto} onChange={(e)=>{setFoto(e.target.value)}} />
-          <Select name={"turno"} select={"Turno"} context={turnos} value={turno}  required={true} onChange={(e)=>{setTurno(e.target.value)}}/>
-          <Select  name={"professor"} select={"Professor"} context={professores} value={professor} onChange={(e)=>{setProfessor(e.target.value)}}  />
+          <Input type={"url"} name={"foto"} labelname="Foto URL"  value={foto} onChange={(e)=>{setFoto(e.target.value)}} />
+          <Select name={"turno"}  select={"Turno"}context={turnos} value={turno} required={true} onChange={(e)=>{setTurno(e.target.value)}}/>
+          <Select  name={"professor"}  select={"Professor"} context={professores} value={professor} required={true} onChange={(e)=>{setProfessor(e.target.value)}}  />
         </fieldset>
 
         <fieldset className={styles.endereco}>
           <h2>Endereço</h2>
 
-          <Input  type={"text"}   name={"cep"}      labelname="CEP"    req={true}    value={cepVal} onChange={(e)=>{setCepVal(e.target.value)}} />
+          <Input  type={"text"}   name={"cep"}      labelname="CEP" onBlur={handleCep}    req={true}    value={cepVal} onChange={(e)=>{setCepVal(e.target.value)}} />
           <Input  type={"text"} name={"rua"} labelname="Rua"  value={rua} onChange={(e)=>{setRua(e.target.value)} }   />
           <Input  type={"text"} name={"bairro"} labelname="Bairro"  value={bairro} onChange={(e)=>{setBairro(e.target.value)}}   />
 
@@ -164,12 +163,12 @@ function handleSubmit(e){
         <fieldset className={styles.boletim}>
             <h2>Boletim</h2>
 
-            <Input  type={"text"}  name={"matematica"}  labelname="Matemática" req={false}  disabled={false} value={mat} onChange={(e)=>{setMat(e.target.value)}}  />
-            <Input  type={"text"}  name={"historia"}  labelname="História" req={false} disabled={false} value={hist} onChange={(e)=>{setHist(e.target.value)}}  />
-            <Input  type={"text"}  name={"geografia"}  labelname="Geografia" req={false} disabled={false} value={geo} onChange={(e)=>{setGeo(e.target.value)}}   />
-            <Input  type={"text"}  name={"portugues"}  labelname="Português" req={false} disabled={false} value={port} onChange={(e)=>{setPort(e.target.value)}}   />
-            <Input  type={"text"}  name={"artes"}  labelname="Artes" req={false} disabled={false} value={artes} onChange={(e)=>{setArtes(e.target.value)}}   />
-            <Input  type={"text"}  name={"edfisica"}  labelname="Educação Física" req={false} disabled={false} value={edf} onChange={(e)=>{setEdf(e.target.value)}}  />
+            <Input  type={"number"}  name={"matematica"}  labelname="Matemática" req={false} step={'0.1'} min={'0'} max={'10'}   value={mat} onChange={(e)=>{setMat(e.target.value)}}  />
+            <Input  type={"number"}  name={"historia"}  labelname="História" req={false}  step={'0.1'} min={'0'} max={'10'} value={hist} onChange={(e)=>{setHist(e.target.value)}}  />
+            <Input  type={"number"}  name={"geografia"}  labelname="Geografia" req={false}  step={'0.1'} min={'0'} max={'10'} value={geo} onChange={(e)=>{setGeo(e.target.value)}}   />
+            <Input  type={"number"}  name={"portugues"}  labelname="Português" req={false}  step={'0.1'} min={'0'} max={'10'} value={port} onChange={(e)=>{setPort(e.target.value)}}   />
+            <Input  type={"number"}  name={"artes"}  labelname="Artes" req={false}  value={artes} step={'0.1'} min={'0'} max={'10'} onChange={(e)=>{setArtes(e.target.value)}}   />
+            <Input  type={"number"}  name={"edfisica"}  labelname="Educação Física" req={false} step={'0.1'} min={'0'} max={'10'}  value={edf} onChange={(e)=>{setEdf(e.target.value)}}  />
 
 
         </fieldset>
