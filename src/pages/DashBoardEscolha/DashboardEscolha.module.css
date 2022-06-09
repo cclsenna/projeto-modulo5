@@ -3,7 +3,9 @@
 .container{
     text-align:center;
     padding-top: 2rem;
-    background-color:#D8D2CB;
+    background-color:#f1eeeb;
+    height: 100%;
+    flex-grow: 3;
 }
 
 

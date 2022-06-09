@@ -45,7 +45,7 @@ export default function Carrossel() {
           </a>
           <div className="container__titulo3">
             <h2>
-              Venha para a Escola Holandesa do Méier! Matriculas abertas até
+              Venha para o Colégio São Cristovão! Matriculas abertas até
               25/06
             </h2>
           </div>

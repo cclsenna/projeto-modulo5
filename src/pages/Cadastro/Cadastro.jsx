@@ -12,6 +12,7 @@ export default function Cadastro() {
 
   const [cep, setCep] = useState({});
   const[validacao, setvalidacao] = useState('');
+  
   function handleSubmit(e) {
     const validador = validaCampos(e);
     setvalidacao(validador);

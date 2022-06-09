@@ -1,18 +1,11 @@
 import Header from "../Components/Header/Header.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
 import CardFunc from "../pages/DashBoardEscolha/CardFunc/CardFunc.jsx";
-import imgCreate from "../assets/imgs/img_Create.png";
 import imgSearch from "../assets/imgs/img_search.svg";
 import DashboardEscolha from "../pages/DashBoardEscolha/DashboardEscolha";
 import styles from "../App.module.css";
-import  {
-  BrowserRouter as Router,
-  Routes as Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import  {  BrowserRouter as Router,  Routes as Switch,  Route,  Link} from "react-router-dom";
 import Home from "../pages/Home/Home.jsx";
-
 import Sobre from "../pages/Sobre/Sobre.jsx";
 import DashboardBusca from "../pages/protected/DashboardBusca/DashboardBusca.jsx";
 import AreaGestor from "../Components/AreaGestor/AreaGestor.jsx";
@@ -32,11 +25,13 @@ function Routes() {
             <Switch> 
                 <Route path="/home" element={<Home/>} /> 
                 <Route path="/sobre" element={<Sobre />} />
-                <Route path="/" element={<Home/>} /> 
-               
-                 <Route path="/dashboardescola" element={<DashboardEscolha/>}/>  
-                <Route path="/dashboard-busca" element={<DashboardBusca />} />     
-                <Route path="/areadogestor" element={<AreaGestor />}></Route>
+                <Route path="/" element={<Home/>} />  
+                <Route path="/dashboard-busca" element={<DashboardBusca />} />
+                <Route path="/cadastro" element={<Cadastro />} />   
+    
+              
+                <Route path="/dashboardescola" element={<DashboardEscolha/>}/>  
+                <Route path="/areadogestor" element={<AreaGestor />} />
 
             </Switch>
             
