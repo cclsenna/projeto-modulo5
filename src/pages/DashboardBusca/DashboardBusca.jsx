@@ -2,9 +2,8 @@ import React, {useEffect, useState } from 'react';
 import InputBusca from './InputBusca/InputBusca';
 import styles from './DashboardBusca.module.css';
 import CardAluno from './CardAluno/CardAluno.jsx';
-import cris from '../../../assets/imgs/735216.png';
 import ModalDados from './ModalDados/ModalDados';
-import { getApi } from '../../../services/api';
+import { getApi } from '../../services/api';
 
 function DashboardBusca() {
 
@@ -27,7 +26,9 @@ function DashboardBusca() {
   async function buscarFiltrado(){
     const retorno= await getApi();
     const filtrado=retorno.filter((element)=>{
-      if(element.nome.toLowerCase().includes(busca.toLowerCase())||element.sobrenome.toLowerCase().includes(busca.toLowerCase())) return true;
+      if(element.nome.toLowerCase().includes(busca.toLowerCase())||
+      element.sobrenome.toLowerCase().includes(busca.toLowerCase())
+      ) return true;
       else return false;          
 
     });        

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './ModalDel.module.css';
-import Botao from '../../../../Components/Botao/Botao';
-import {deleteApi,putAPi} from '../../../../services/api.js'
+import Botao from '../../../Components/Botao/Botao';
+import {deleteApi,putAPi} from '../../../services/api.js'
 import ModalConf from '../ModalConf/ModalConf';
 
 function ModalDel({dados,modal,setModal,setModalInfo,infoModal}) {

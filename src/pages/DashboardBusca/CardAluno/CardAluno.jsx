@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import styles from './CardAluno.module.css';
-import edit from '../../../../assets/imgs/icons8-edit.svg';
+import edit from '../../../assets/imgs/icons8-edit.svg';
 import ModalDados from '../ModalDados/ModalDados';
 
 function CardAluno({info,setModal}) {
@@ -33,8 +33,6 @@ function CardAluno({info,setModal}) {
         
         <div className={styles.card__edit} onClick={()=>{
           setModal([true,element]);
-          console.log('elemento');
-          console.log(element);
 
         }}>
           <img src={edit} />

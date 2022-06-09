@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {getApi} from '../../../../services/api';
+import {getApi} from '../../../services/api';
 import styles from './InputBusca.module.css';
 
 const InputBusca=({textoPlaceholder,setDados,busca,setBusca})=> {

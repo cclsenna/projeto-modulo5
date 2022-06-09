@@ -16,6 +16,10 @@ export default function Cadastro() {
   function handleSubmit(e) {
     const validador = validaCampos(e);
     setvalidacao(validador);
+    if(validacao !== "Preencha todos os campos") {
+      e.target.reset();
+      setCep({});
+    }
   }
   async function handleCep(e) {
     const api = await apiCep(e.target.value);

@@ -7,10 +7,11 @@ export default function Select(props) {
       name={props.name}
       className={styles.input}
       value={props.value}
+      onChange={props.onChange}
       >
 
         {props.context.map((el, index) => (
-          <option key={index} value={index+1} className={styles.option} >
+          <option key={index} value={index+1} className={styles.option}>
             {el}
           </option>
         ))}

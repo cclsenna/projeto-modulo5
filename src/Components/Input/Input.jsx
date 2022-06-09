@@ -15,6 +15,9 @@ export default function Input(props) {
         disabled={props.disabled}
         className={styles.input}
         data-matricula={props['data-matricula']}
+        step={props.step}
+        max={props.max}
+        min={props.min}
       />
       <label className={styles.user_label}>{props.labelname}</label>
      </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ModalConf.module.css'
-import Botao from '../../../../Components/Botao/Botao';
+import Botao from '../../../Components/Botao/Botao';
 
 function ModalConf({dados,modal,setModal,setModalInfo,setModalDel}) {
 
