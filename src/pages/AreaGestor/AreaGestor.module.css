@@ -1,158 +1,148 @@
 .container {
-    width: 100vw;
-    background-color: #f1eeeb;
+  width: 100vw;
+  background-color: #f1eeeb;
 }
-.containerAreaGestor{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-    margin: 20px; 
-    padding: 30px;
-    box-shadow: -5px 5px 0 #6e8c3aab, -10px 10px 0 #0000002a;
-   
+.containerAreaGestor {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 30px;
+  box-shadow: -5px 5px 0 #6e8c3aab, -10px 10px 0 #0000002a;
 }
 
-.logoAreaGestor{
+.logoAreaGestor {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+}
+
+.titleAreaGestor {
+  font-family: Indie;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.subTitleAreaGestor {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  vertical-align: middle;
+  width: 100%;
+  height: 80%;
+  font-size: 15px;
+}
+.paragrafo1 {
+  margin-left: 5px;
+  color: #07a1c3d0;
+}
+
+.sectionAreaGestor {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 20rem;
+  margin: 1.5rem auto;
+}
+.inputEmail,
+.inputSenha {
+  border: solid 2px #07a1c3d0;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  font-size: 16px;
+  padding: .7em 0 .7rem .7rem;
+  width: 100%;
+}
+.sectionAreaGestor label {
+    color: black;
+  font-weight: bold;
+  pointer-events: none;
+  font-size: 14px;
+} 
+.btnAreaGestor {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.btnConectese {
+  background-color: #07a1c3d0;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.btnConectarGoogle {
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.212);
+}
+.subtitleEsqueceu {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  margin-top: 5px;
+}
+.paragrafo2 {
+  color: #07a1c3d0;
+  margin-left: 5px;
+}
+
+@media (min-width: 770px) {
+  .containerAreaGestor {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: solid 2px #07a1c3d0;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .sectionAreaGestor{
+    margin: 2rem auto;
+  }
+  .logoAreaGestor {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 30%;
-}
-
-.titleAreaGestor{
+    width: 20%;
+  }
+  .titleAreaGestor {
     font-family: Indie;
     align-items: center;
     margin: 0 auto;
-    font-size: 20px;
-}
-
-.subTitleAreaGestor{
+    font-size: 40px;
+  }
+  .subTitleAreaGestor {
     display: flex;
     justify-content: center;
     text-align: justify;
     vertical-align: middle;
     width: 100%;
     height: 80%;
-    font-size: 15px;
-}
-.paragrafo1{
-    margin-left: 5px;
-    color: #07a1c3d0;
-}
-
-.sectionAreaGestor{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 10px;   
-    
-    
-}
-.inputEmail{
-    border: solid 2px #07a1c3d0;
-    border-radius: 5px;
-    font-style: italic;
-    margin-bottom: 5px;
-    
-}
-.inputSenha{
-    border: solid 2px #07a1c3d0;
-    border-radius: 5px;
-    font-style: italic;
-    
-
-}
-.btnAreaGestor{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 10px;
-}
-.btnConectese{
-    background-color: #07a1c3d0;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-.btnConectarGoogle{
-    border: none;
-    border-radius: 5px;
+    font-size: 25px;
+  }
+  .inputEmail {
+    padding: 9px;
+  }
+  .inputSenha {
+    padding: 9px;
+  }
+  .btnConectese {
+    padding: 8px;
+  }
+  .btnConectarGoogle {
+    padding: 8px;
+  }
+  .subtitleEsqueceu {
+    font-size: 20px;
     margin-top: 5px;
-    cursor: pointer;
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.212);
-    
+  }
 }
-.subtitleEsqueceu{
-    display: flex;
-    justify-content: center;
-    font-size: 13px;
-    margin-top: 5px;
-    
-}
-.paragrafo2{
-    color: #07a1c3d0;
-    margin-left: 5px;
-}
-
-@media (min-width:770px) {
-    .containerAreaGestor{
-    width: 40%;       
-    margin: 0 auto;
-    margin-bottom: 30px;    
-    border: solid 2px #07a1c3d0;
-    margin-bottom: 40px;
-    margin-top: 40px;
-
-        
-
-    }
-    .logoAreaGestor{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 20%;
-    }
-    .titleAreaGestor{
-        font-family: Indie;
-        align-items: center;
-        margin: 0 auto;
-        font-size: 40px;
-    }
-    .subTitleAreaGestor{
-        display: flex;
-        justify-content: center;
-        text-align: justify;
-        vertical-align: middle;
-        width: 100%;
-        height: 80%;
-        font-size: 25px;
-    }
-    .inputEmail{
-        padding: 9px;
-    }
-    .inputSenha{
-        padding: 9px;
-    
-    }
-    .btnConectese{
-        padding: 8px;
-    }
-    .btnConectarGoogle{
-        padding: 8px;
-        
-    }
-    .subtitleEsqueceu{
-        font-size: 20px;
-        margin-top: 5px;
-        
-    }
-    
-        
-    }
