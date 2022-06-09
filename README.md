@@ -1,11 +1,12 @@
-<div style="margin:5rem 0;
+<div  style="margin:5rem 0;
 width: 100%;
 display: flex;
 justify-content:space-between;
-align-items: center; 
 flex-direction: column;">
-   <h2 style="font-size: 25px;margin-bottom: 2rem;">Colégio São Cristóvão</h2>
-    <img style="width: 145px;" src="./src/assets/imgs/logo.png" alt="logo">
+   <h2 align="center" style="font-size: 25px;margin-bottom: 2rem;">Colégio São Cristóvão</h2>
+   <div align="center">
+    <img style="width: 145px;" src="./src/assets/imgs/logo.png" alt="logo"/>
+   </div>
 </div>
 
 # 🔖 Descrição
@@ -23,7 +24,7 @@ Node.Js e Express;.</p>
 
 # 💻📱 Layout
 
-<div style="display: flex; justify-content: space-around; align-items: center; margin-bottom: 5rem;">
+<div style="width: 100vw; display: flex; justify-content: space-around; align-items: center; margin-bottom: 5rem;">
 <div style="width: 60%; display: flex; flex-direction: column; align-items: center;">
  <p style="text-align:center; font-size: 20px; margin-bottom: 2rem;">💻 Desktop</p>
 <img style=" width: 50rem; height: 25rem;" src="./src/assets/imgs/layoutDesktop.gif" alt="layoutDesktop">
